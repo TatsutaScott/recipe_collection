@@ -1,4 +1,5 @@
 <template>
+  <navSection />
   <div id="main">
     <titleSection
       :title="recipe.title" 
@@ -19,6 +20,7 @@
 
 <script setup>
   import recipe from './static/baked_beans.json';
+  import navSection from './components/nav_section.vue'
   import titleSection from './components/title_section.vue'
   import ingredientsSection from './components/ingredients_section.vue'
   import directionsSection from './components/directions_section.vue'
@@ -27,10 +29,14 @@
 <style>
 body{
   font-family: Helvetica;
-  margin: 2em;
+  background-color: white;
+  margin: 0;
 }
+
 #main{
+  padding:2em 4em;
   max-width:800px;
   margin: 0 auto;
+  background-color: white;
 }
 </style>
