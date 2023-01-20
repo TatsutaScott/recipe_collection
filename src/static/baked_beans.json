@@ -9,8 +9,8 @@
     ],
     "ingredients": [
         {
-            "subsection": true,
             "title": "Main Ingredients",
+            "optional": false,
             "contents": [
                 {
                     "name": "Navy Beans",
@@ -66,7 +66,6 @@
             ]
         },
         {
-            "subsection": true,
             "title": "Topping",
             "optional": true,
             "contents": [
