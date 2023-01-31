@@ -1,6 +1,6 @@
 <template>
     <div id="navDiv">
-        <span id="siteTitle">龍田食堂</span>
+        <!-- <span id="siteTitle">龍田食堂</span> -->
     </div>
 </template>
 
@@ -21,7 +21,7 @@
 }
 #siteTitle{
     font-size: 2em;
-font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     color: rgb(150, 183, 169);
     margin: 0.5em 0;
 }

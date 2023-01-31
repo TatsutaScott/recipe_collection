@@ -25,7 +25,7 @@ ol{
     padding-left: 1em;
 }
 li{
-    margin: 1em 0;
-    line-height: 1.5em;
+    margin: 0.5em 0;
+    line-height: 1.25em;
 }
 </style>

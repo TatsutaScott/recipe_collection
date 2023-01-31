@@ -15,15 +15,29 @@
 </template>
 
 <script setup>
-import { defineProps, ref } from 'vue'
+import { defineProps, ref, defineExpose, onMounted } from 'vue'
 import { Fraction } from 'fractional'
+
+const copyJSON = (data) => {
+    return JSON.parse(JSON.stringify(data));
+}
 
 const props = defineProps({
     ingredientGroup: Object
 });
-const title  = ref(props.ingredientGroup.title);
-const contents = ref(props.ingredientGroup.contents);
-const optional = ref(props.ingredientGroup.optional);
+defineExpose({
+    hi, 
+    multiplySection
+});
+const ingredientCopy = ref(copyJSON(props.ingredientGroup));
+const title = ref(ingredientCopy.value.title);
+const contents = ref(ingredientCopy.value.contents);
+const optional = ref(ingredientCopy.value.optional);
+onMounted(() =>{
+    console.log(ingredientCopy.value)
+    multiplySection(2);
+    multiplySection(1)
+})
 
 function formatAmount(amount){
     if(typeof amount == 'number'){
@@ -38,6 +52,22 @@ function formatAmount(amount){
 function toFraction(decimal) {
     if(typeof decimal != 'number'){return decimal}
     return new Fraction(decimal).toString();
+}
+
+function hi(){
+    console.log(`${title.value} section loaded.`);
+}
+
+function multiplySection(mult){
+    contents.value.forEach((ingredient, index) =>{
+        if(typeof ingredient.amount == 'number'){
+            ingredient.amount = props.ingredientGroup.contents[index].amount * mult;
+        }else if (Array.isArray(ingredient.amount)){
+            ingredient.amount[0] = props.ingredientGroup.contents[index].amount[0] * mult;
+            ingredient.amount[1] = props.ingredientGroup.contents[index].amount[1] * mult;
+        }
+        
+    });
 }
 </script>
 
@@ -54,8 +84,6 @@ function toFraction(decimal) {
 .ingredient:hover{
     background-color: rgba(179, 179, 179, 0.424);
     border-radius: 5px;
-    /* border: 3px solid gray; */
-    /* padding: 1em; */
 }
 span {
     font-size: 0.85em;
