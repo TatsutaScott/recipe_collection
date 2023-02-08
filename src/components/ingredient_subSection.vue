@@ -51,7 +51,15 @@ function formatAmount(amount){
 
 function toFraction(decimal) {
     if(typeof decimal != 'number'){return decimal}
-    return new Fraction(decimal).toString();
+    const res = new Fraction(decimal);
+    return formatFraction(res);
+}
+
+function formatFraction(fraction){
+    if (fraction.denominator == 1) return fraction.toString();
+    const sup = ['⁰','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹'];
+    const sub = ['₀','₁','₂','₃','₄','₅','₆','₇','₈','₉'];
+    return `${sup[fraction.numerator]}/${sub[fraction.denominator]}`;
 }
 
 function hi(){

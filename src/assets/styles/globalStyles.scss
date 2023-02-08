@@ -1,4 +1,18 @@
+//color palette 
 $color-primary: #7EA16B;
 $color-weak: #66716b;
 $color-black: #252A14;
 $color-white: #fffefb;
+
+//media query break points
+$phone: 480px;
+$tablet: 481px;
+$laptop: 769px;
+
+//utilities
+@mixin flex($direction: row, $spacing: flex-start, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $spacing;
+    align-items: $align;
+}

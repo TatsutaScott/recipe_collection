@@ -15,7 +15,6 @@
       :directions="recipe.directions"
     />
   </div>
- 
 </template>
 
 <script setup>
@@ -34,9 +33,9 @@ body{
   color:$color-black;
   margin: 0;
 }
-body::-webkit-scrollbar{
-  width: 4em;
-}
+// body::-webkit-scrollbar{
+//   width: 4em;
+// }
 #main{
   padding:2em 4em;
   max-width:800px;

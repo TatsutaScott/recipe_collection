@@ -46,12 +46,11 @@ h1{
     margin: 0;
 }
 #infoSection{
+    @include flex(row);
     margin: 0.5em 0;
     padding: 1em 0;
-    display: flex;
-    flex-direction: row;
+    
     flex-wrap: wrap;
-    justify-content:flex-start;
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
 }
