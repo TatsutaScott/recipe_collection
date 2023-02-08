@@ -26,18 +26,29 @@
   import directionsSection from './components/directions_section.vue'
 </script>
 
-<style>
+<style lang="scss">
+@import './assets/styles/globalStyles.scss';
 body{
   font-family: Helvetica;
-  background-color: white;
+  background-color: $color-white;
+  color:$color-black;
   margin: 0;
 }
-
+body::-webkit-scrollbar{
+  width: 4em;
+}
 #main{
   padding:2em 4em;
   max-width:800px;
   margin: 0 auto;
-  background-color: white;
-  
+  background-color: $color-white;
+  filter: drop-shadow(0 0 0.5rem lightgrey);
+  border-radius:0 0 15px 15px ;
+  margin-bottom: 2em;
+}
+.hide{
+  display: none !important; 
+  opacity: 0;
+  transition: opacity 1s;
 }
 </style>

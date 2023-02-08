@@ -39,7 +39,8 @@ function isURL(text) {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '../assets/styles/globalStyles.scss';
 h1{
     font-size: 3em;
     margin: 0;
@@ -51,8 +52,8 @@ h1{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content:flex-start;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
 }
 .info{
     margin-right: 1em;
@@ -60,7 +61,7 @@ h1{
     align-items: center;
 }
 .descriptor{
-    color: gray;
+    color: $color-weak;
     font-size: 1em;
     margin-right: 0.25em;
 }
@@ -68,9 +69,9 @@ h1{
     font-size: 0.75em;
     padding: 0.125em 0.5em;
     margin-right: 0.5em;
-    border: 1px solid grey;
+    border: 1px solid $color-weak;
     border-radius: 5px;
-    background-color: grey;
+    background-color: $color-weak;
     color: white;
     transition: background-color 0.25s ease-out 50ms
 }

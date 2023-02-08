@@ -14,12 +14,11 @@
                 <number v-if="activeMult == 'custom'" :value="1" :step="0.25"
                     @input="(n) => subIngredients.forEach(s => s.multiplySection(n))" />
             </div>
-
         </div>
+        <button class="menuToggle" @click="toggleIngredients">{{ hideIngredients? '▼':'▲'}}</button>
     </div>
-    <div id="ingredientList">
-        <subsection v-for="(ingredient) in props.ingredients" :key="ingredient.title" :ingredientGroup="ingredient"
-            ref="subIngredients" />
+    <div id="ingredientList"  :class="hideIngredients ? 'hide':''">
+        <subsection v-for="(ingredient) in props.ingredients" :key="ingredient.title" :ingredientGroup="ingredient" ref="subIngredients" />
     </div>
 </div> 
 </template>
@@ -41,9 +40,21 @@ onMounted(() =>{
 })
 
 const activeMult = ref('normal');
+
+const hideIngredients = ref(false);
+function toggleIngredients(){
+    hideIngredients.value = !hideIngredients.value;
+}
 </script>
 
-<style>
+<style lang="scss">
+@import 'src/assets/styles/globalStyles.scss';
+
+.menuToggle {
+    border: none;
+    color: $color-weak;
+    background: none;
+}
 #ingredients{
     margin: 2em 0;
 }
@@ -51,10 +62,10 @@ const activeMult = ref('normal');
     display: flex;
     justify-content: space-between;
     align-content: center;
-    border: 1px solid black;
+    border: 1px solid lightgray;
     border-radius: 5px;
     padding: 0.25em 0.5em;
-    background-color: rgba(255,255,255, 1);
+    background-color: $color-white;
 }
 #ingredientHeader>h2{
     margin: 0.25em 0;
@@ -83,7 +94,7 @@ const activeMult = ref('normal');
     max-width: 4em;
 }
 .note{
-    color: grey;
+    color: $color-weak;
     font-style: italic;
     font-weight: 50;
     font-size: 1em;
@@ -91,18 +102,18 @@ const activeMult = ref('normal');
 }
 
 .active{
-    background-color: black;
+    background-color: $color-black;
     padding: 0.125em 0.5em;
-    border: 1px solid grey;
+    border: 1px solid $color-weak;
     border-radius: 5px;
-    background-color: grey;
-    color: white;
+    background-color: $color-weak;
+    color: $color-white;
     transition: background-color 0.25s ease-out 50ms;
     transition: border 0.25s ease-out 50ms;
 }
 
 .basic{
-    color:grey;
+    color:$color-weak;
     padding: 0.125em 0.5em;
 }
 

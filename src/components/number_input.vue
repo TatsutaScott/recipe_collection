@@ -44,7 +44,8 @@ function _updateValue(newVal){
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import '../assets/styles/globalStyles.scss';
 .inputWrap{
     margin-left: 0.5em;
     padding: 0.125em;
@@ -52,8 +53,8 @@ function _updateValue(newVal){
 
 button{
     border: none;
-    background-color:white;
-    color: gray;
+    background-color:$color-white;
+    color: $color-weak;
 }
 
 .dec{
@@ -66,7 +67,7 @@ button{
 input{
     width: 2em;
     border: none;
-    color: gray;
+    color: $color-weak;
 }
 
 /* removing the arrows */
