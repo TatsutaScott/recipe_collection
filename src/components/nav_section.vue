@@ -19,7 +19,16 @@
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
 @import '../assets/styles/globalStyles.scss';
-
+#nav{
+    background-color: $color-white;
+    @include flex(column, flex-end, left);
+    padding: 1em;
+    border-right: 1px solid black;
+    // filter: drop-shadow(14px 8px 8px rgba(0, 0, 0, 0.1));
+}
+#siteTitle{
+    font-size: 3em;
+}
 // #navDiv{
 //     // position: fixed;
 //     // top: 0;

@@ -41,7 +41,7 @@
 
   display: grid;
   grid-template-columns: 1fr 3fr 3fr   ;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 1fr 5fr;
   grid-template-areas:
     "n t t"
     "n i d";
@@ -60,6 +60,7 @@
 }
 body{
 overflow: hidden;
+margin: 0;
 }
 // body{
 //   font-family: Helvetica;

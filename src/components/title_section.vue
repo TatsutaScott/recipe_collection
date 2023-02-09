@@ -41,21 +41,37 @@ function isURL(text) {
 
 <style lang="scss">
 @import '../assets/styles/globalStyles.scss';
-h1{
+#title{
+    @include flex(row, flex-start, baseline);
+    padding: 2em 4em;
+    border-bottom: 1px solid black;
+}
+
+#infoSection {
+    @include flex(row);
+    margin-left: 3em;
+}
+h1 {
     font-size: 3em;
     margin: 0;
 }
-#infoSection{
-    @include flex(row);
-    margin: 0.5em 0;
-    padding: 1em 0;
-    
-    flex-wrap: wrap;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
+.tag {
+        font-size: 0.75em;
+        padding: 0.125em 0.5em;
+        margin-right: 0.5em;
+        border: 1px solid $color-weak;
+        border-radius: 5px;
+        background-color: $color-weak;
+        color: white;
+        transition: background-color 0.25s ease-out 50ms
 }
+.tag:hover{
+        background-color: black;
+        border: 1px solid black;
+}
+
 .info{
-    margin-right: 1em;
+    margin-right: 0.5em;
     display: flex;
     align-items: center;
 }
@@ -63,19 +79,5 @@ h1{
     color: $color-weak;
     font-size: 1em;
     margin-right: 0.25em;
-}
-.tag{
-    font-size: 0.75em;
-    padding: 0.125em 0.5em;
-    margin-right: 0.5em;
-    border: 1px solid $color-weak;
-    border-radius: 5px;
-    background-color: $color-weak;
-    color: white;
-    transition: background-color 0.25s ease-out 50ms
-}
-.tag:hover{
-    background-color: black;
-    border: 1px solid black;
 }
 </style>
