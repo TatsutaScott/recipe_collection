@@ -1,19 +1,21 @@
 <template>
-    <div id="directionsTitle">
-        <h2>Directions</h2>
-        <button class="menuToggle" @click="toggleDirections">{{ hideDirections? '▼':'▲'}}</button>
-    </div>
-    
-    <div v-if="props.directions.divided" :class="hideDirections ? 'hide': ''">
-        <template v-for="section in props.directions.content" :key="section">
-           <h3>{{ section.title }}</h3>
-            <ol>
-                <li v-for="direction in section.steps" :key="direction">{{ direction }}</li>
-            </ol>
-        </template>
-    </div>
-    <div v-else>
-        <h2>hi</h2>
+    <div>
+        <div id="directionsTitle">
+            <h2>Directions</h2>
+            <button class="menuToggle" @click="toggleDirections">{{ hideDirections? '▼':'▲'}}</button>
+        </div>
+        
+        <div v-if="props.directions.divided" :class="hideDirections ? 'hide': ''">
+            <template v-for="section in props.directions.content" :key="section">
+            <h3>{{ section.title }}</h3>
+                <ol>
+                    <li v-for="direction in section.steps" :key="direction">{{ direction }}</li>
+                </ol>
+            </template>
+        </div>
+        <div v-else>
+            <h2>hi</h2>
+        </div>
     </div>
 </template>
 
