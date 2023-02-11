@@ -1,33 +1,96 @@
 <template>
     <div id="navDiv">
-        <div id="siteTitle">
-            <span>TITLE</span>
-        </div>
+        
         
         <div id="navOptions">
             <span class="navOption">index</span>
             <span class="navOption">about</span>
             <input type="search" id="search" class="navOption" placeholder="search">
         </div>
-        
+        <div id="siteTitle">
+            <span>龍田食堂</span>
+        </div>
+        <div id="viewOptions">
+                <span id="small">A</span>
+                <span id="medium">A</span>
+                <span id="large">A</span>
+            
+            <span @click="toggleDarkMode" v-if="darkMode" class="material-symbols-outlined">dark_mode</span>
+            <span @click="toggleDarkMode" v-else class="material-symbols-outlined a">light_mode</span>
+        </div>
     </div>
 </template>
 
 <script setup>
+import {ref} from 'vue';
+
+const darkMode = ref(false);
+function toggleDarkMode(){
+    darkMode.value = !darkMode.value;
+}
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
 @import '../assets/styles/globalStyles.scss';
 #nav{
-    background-color: $color-white;
-    @include flex(column, flex-end, left);
-    padding: 1em;
-    border-right: 1px solid black;
-    // filter: drop-shadow(14px 8px 8px rgba(0, 0, 0, 0.1));
+    @include flex(column, flex-end, center);
+    @include container;
+}
+#navOptions{
+    @include flex(column, flex-start, left);
+    @include basic;
+    margin-bottom: 1rem;
+    span {
+        margin: .25rem 0;
+        color: $color-weak;
+    }
+    span:hover {
+        color: $color-text;
+    }
+    input{
+        margin: .25rem 0;
+    }
+}
+#viewOptions{
+    @include flex(row, space-between, baseline);
+    width:50%;
+    color: $color-weak;
+}
+#small {
+    font-size: $base-font-size * 0.75;
+}
+
+#medium {
+    font-size: $base-font-size * 1;
+}
+
+#large {
+    font-size: $base-font-size * 1.5;
 }
 #siteTitle{
-    font-size: 3em;
+    font-size: 2rem;
+    color: $color-primary;
+}
+#search {
+    border-radius: 5px;
+    width: 10em;
+    border: 1px solid $color-weak;
+    appearance: none;
+    outline: none;
+}
+#search::placeholder{
+    color: $color-weak;
+}
+#search:focus{
+    border: 2px solid $color-weak;
+}
+#search::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    position: relative;
+    right: 1px;
+    content: URL('../assets/icons/close_FILL0_wght400_GRAD0_opsz48.svg');
+    width: 20px;
+    height: 20px;
 }
 // #navDiv{
 //     // position: fixed;
@@ -49,27 +112,7 @@
 //     margin: 0.5em 0;
 //     color: $color-primary;
 // }
-// #search{
-//     border-radius: 5px;
-//     width: 10em;
-//     border: 1px solid lightgray;
-//     appearance: none;
-//     outline: none;
-// }
-// #search::placeholder{
-//     color: lightgray;
-// }
-// #search:focus{
-//     border: 2px solid lightgray;
-// }
-// #search::-webkit-search-cancel-button {
-//     -webkit-appearance: none;
-//     position: relative;
-//     right: 1px;
-//     content: URL('../assets/icons/close_FILL0_wght400_GRAD0_opsz48.svg');
-//     width: 20px;
-//     height: 20px;
-// }
+// 
 
 // #navOptions{
 //     display: flex;

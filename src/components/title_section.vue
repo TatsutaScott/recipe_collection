@@ -1,4 +1,5 @@
 <template>
+    <div>
     <div id="titleSection">
         <h1>{{ props.title }}</h1>
         <div id="infoSection">
@@ -20,6 +21,8 @@
                 <span class="tag" v-for="tag in props.tags" :key="tag"> {{ tag }}</span>
             </div>
         </div>
+        
+    </div>
     </div>
 </template>
 
@@ -42,11 +45,15 @@ function isURL(text) {
 <style lang="scss">
 @import '../assets/styles/globalStyles.scss';
 #title{
-    @include flex(row, flex-start, baseline);
-    padding: 2em 4em;
-    border-bottom: 1px solid black;
+    @include container;
+    @include flex;
+    // padding: auto 2rem !important;
 }
-
+#titleSection{
+    // margin: auto 2rem;
+    @include basic;
+    @include flex(row, flex-start, baseline);
+}
 #infoSection {
     @include flex(row);
     margin-left: 3em;

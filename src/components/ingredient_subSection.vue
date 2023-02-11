@@ -82,7 +82,11 @@ function multiplySection(mult){
 <style scoped>
 .subSectionTitle{
     font-size: 1em;
+    width: 100%;
 }
+/* .amount{
+    font-size: 112.5%;
+} */
 .ingredient {
     display: grid;
     grid-template-columns: 2fr 4fr 6fr;

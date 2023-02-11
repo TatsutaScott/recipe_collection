@@ -1,7 +1,10 @@
+//imports
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0");
+
 //color palette 
 $color-primary: #7EA16B;
 $color-weak: #66716b;
-$color-black: #252A14;
+$color-text: #252A14;
 $color-white: #fffefb;
 
 //media query break points
@@ -9,10 +12,51 @@ $phone: 480px;
 $tablet: 481px;
 $laptop: 769px;
 
+//other variables
+$base-font-size: 1.25rem;
+
+//util classes
+.note {
+    color: $color-weak;
+    font-style: italic;
+    margin-left: 0.5em;
+    font-size: 75% !important;
+}
+
 //utilities
 @mixin flex($direction: row, $spacing: flex-start, $align: center) {
     display: flex;
     flex-direction: $direction;
     justify-content: $spacing;
     align-items: $align;
+}
+
+@mixin container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2rem;
+    border: 0.5px solid $color-weak;
+    background-color: $color-white;
+}
+
+@mixin scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@mixin basic {
+    font-size: $base-font-size;
+}
+
+//configuring things 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {}
+
+::-webkit-scrollbar-thumb {
+    background: $color-weak;
+    border-radius: 10px;
+
 }

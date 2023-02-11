@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div >
         <div id="directionsTitle">
             <h2>Directions</h2>
-            <button class="menuToggle" @click="toggleDirections">{{ hideDirections? '▼':'▲'}}</button>
+            <!-- <button class="menuToggle" @click="toggleDirections">{{ hideDirections? '▼':'▲'}}</button> -->
         </div>
         
         <div v-if="props.directions.divided" :class="hideDirections ? 'hide': ''">
@@ -26,15 +26,27 @@
     });
 
     const hideDirections = ref(false);
-    function toggleDirections(){
-        hideDirections.value = !hideDirections.value;
-    }
+    // function toggleDirections(){
+    //     hideDirections.value = !hideDirections.value;
+    // }
 </script>
 
-<style scoped>
-h2{
-    margin: 0.25em 0;
+<style lang="scss" >
+@import '../assets/styles/globalStyles.scss';
+#directions{
+    @include basic;
+    @include container;
+    @include flex(column, flex-start, left);
+    @include scroll;
 }
+h2{
+    margin: 0;
+    text-align: left;
+}
+li{
+    margin: 0.5em 0;
+}
+/*
 .menuToggle{
     border: none;
     color: grey;
@@ -54,5 +66,5 @@ ol{
 li{
     margin: 0.5em 0;
     line-height: 1.25em;
-}
+} */
 </style>

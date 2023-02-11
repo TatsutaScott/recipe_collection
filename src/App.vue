@@ -33,6 +33,7 @@
 
 <style lang="scss">
 @import './assets/styles/globalStyles.scss';
+
 #content{
   width: 100vw;
   height: 100vh;
