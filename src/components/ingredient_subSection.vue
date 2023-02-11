@@ -1,5 +1,6 @@
 <template>
     <div  class="subsection">
+        <number value="12" />
         <h3  class="subSectionTitle">{{title}} <span class="note" v-if="optional">optional</span></h3>
         <template v-for="ingredient in contents" :key="ingredient.name">
             <div class="ingredient">
@@ -17,6 +18,7 @@
 <script setup>
 import { defineProps, ref, defineExpose, onMounted } from 'vue'
 import { Fraction } from 'fractional'
+import number from './number_comp.vue';
 
 const copyJSON = (data) => {
     return JSON.parse(JSON.stringify(data));
