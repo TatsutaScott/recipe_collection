@@ -1,10 +1,14 @@
 <template>
     <div  class="subsection">
-        <number value="12" />
+        <number ref="n" val="12" />
+        <number val="0.75" />
+        <number val="2.80" />
+        <button @click="test"></button>
         <h3  class="subSectionTitle">{{title}} <span class="note" v-if="optional">optional</span></h3>
-        <template v-for="ingredient in contents" :key="ingredient.name">
+        <template v-for="(ingredient) in contents" :key="ingredient.name" >
             <div class="ingredient">
-                <span class="amount">{{ formatAmount(ingredient.amount) }}</span>
+                <number :val="ingredient.amount" :ref="giveMeRef" />
+                <!-- <span class="amount">{{ formatAmount(ingredient.amount) }}</span> -->
                 <span class="unit">{{ ingredient.unit }}</span>
                 <div>
                     <span class="name">{{ ingredient.name }}</span>
@@ -17,9 +21,8 @@
 
 <script setup>
 import { defineProps, ref, defineExpose, onMounted } from 'vue'
-import { Fraction } from 'fractional'
+// import { Fraction } from 'fractional'
 import number from './number_comp.vue';
-
 const copyJSON = (data) => {
     return JSON.parse(JSON.stringify(data));
 }
@@ -35,49 +38,61 @@ const ingredientCopy = ref(copyJSON(props.ingredientGroup));
 const title = ref(ingredientCopy.value.title);
 const contents = ref(ingredientCopy.value.contents);
 const optional = ref(ingredientCopy.value.optional);
+const ingredientRefs = ref([]);
+
+const giveMeRef = (e) =>{
+    ingredientRefs.value.push(e);
+}
 onMounted(() =>{
     console.log(ingredientCopy.value)
     multiplySection(2);
-    multiplySection(1)
-})
+    multiplySection(1); 
+});
 
-function formatAmount(amount){
-    if(typeof amount == 'number'){
-        return toFraction(amount); 
-    }else if(amount.length == 2){
-        return `${toFraction(amount[0])} - ${toFraction(amount[1])}`;
-    }else{
-        return 'error'; 
-    }
-}
+// function formatAmount(amount){
+//     if(typeof amount == 'number'){
+//         return toFraction(amount); 
+//     }else if(amount.length == 2){
+//         return `${toFraction(amount[0])} - ${toFraction(amount[1])}`;
+//     }else{
+//         return 'error'; 
+//     }
+// }
 
-function toFraction(decimal) {
-    if(typeof decimal != 'number'){return decimal}
-    const res = new Fraction(decimal);
-    return formatFraction(res);
-}
+// function toFraction(decimal) {
+//     if(typeof decimal != 'number'){return decimal}
+//     const res = new Fraction(decimal);
+//     return formatFraction(res);
+// }
 
-function formatFraction(fraction){
-    if (fraction.denominator == 1) return fraction.toString();
-    const sup = ['⁰','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹'];
-    const sub = ['₀','₁','₂','₃','₄','₅','₆','₇','₈','₉'];
-    return `${sup[fraction.numerator]}/${sub[fraction.denominator]}`;
-}
+// function formatFraction(fraction){
+//     if (fraction.denominator == 1) return fraction.toString();
+//     const sup = ['⁰','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹'];
+//     const sub = ['₀','₁','₂','₃','₄','₅','₆','₇','₈','₉'];
+//     return `${sup[fraction.numerator]}/${sub[fraction.denominator]}`;
+// }
 
 function hi(){
     console.log(`${title.value} section loaded.`);
 }
 
-function multiplySection(mult){
-    contents.value.forEach((ingredient, index) =>{
-        if(typeof ingredient.amount == 'number'){
-            ingredient.amount = props.ingredientGroup.contents[index].amount * mult;
-        }else if (Array.isArray(ingredient.amount)){
-            ingredient.amount[0] = props.ingredientGroup.contents[index].amount[0] * mult;
-            ingredient.amount[1] = props.ingredientGroup.contents[index].amount[1] * mult;
-        }
-        
-    });
+function multiplySection(){
+    console.log(props.ingredientGroup);
+    // props.ingredientGroup.forEach(p => {
+    //     console.log(p.title);
+    // })
+    // ingRef.value.forEach(n => {
+       
+    //     n.multiply(mult);
+    // })
+    // contents.value.forEach((ingredient, index) =>{
+    //     if(typeof ingredient.amount == 'number'){
+    //         ingredient.amount = props.ingredientGroup.contents[index].amount * mult;
+    //     }else if (Array.isArray(ingredient.amount)){
+    //         ingredient.amount[0] = props.ingredientGroup.contents[index].amount[0] * mult;
+    //         ingredient.amount[1] = props.ingredientGroup.contents[index].amount[1] * mult;
+    //     } 
+    // });
 }
 </script>
 

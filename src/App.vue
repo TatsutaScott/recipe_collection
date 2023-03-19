@@ -5,22 +5,6 @@
     <ingredientsSection id="ingredients" :ingredients="recipe.ingredients" />
     <directionsSection id="directions" :directions="recipe.directions" />
   </div>
-  <!-- <navSection />
-  <div id="main">
-    <titleSection
-      :title="recipe.title" 
-      :source="recipe.source" 
-      :time="recipe.time" 
-      :servings="recipe.servings"
-      :tags="recipe.tags" 
-    />
-    <ingredientsSection
-      :ingredients="recipe.ingredients"
-    />
-    <directionsSection
-      :directions="recipe.directions"
-    />
-  </div> -->
 </template>
 
 <script setup>
@@ -62,6 +46,7 @@
 body{
 overflow: hidden;
 margin: 0;
+font-family: $base-font;
 }
 // body{
 //   font-family: Helvetica;

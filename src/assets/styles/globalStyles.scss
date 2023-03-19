@@ -1,6 +1,5 @@
 //imports
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0");
-
 //color palette 
 $color-primary: #7EA16B;
 $color-weak: #66716b;
@@ -14,6 +13,7 @@ $laptop: 769px;
 
 //other variables
 $base-font-size: 1.25rem;
+$base-font: 'Migra Extra bold';
 
 //util classes
 .note {
@@ -60,3 +60,9 @@ $base-font-size: 1.25rem;
     border-radius: 10px;
 
 }
+
+// @font-face {
+//     font-family: 'Migra Extra bold';
+//     src: url('../fonts/PPMigra-Extrabold.otf');
+
+// }
