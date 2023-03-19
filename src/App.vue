@@ -1,18 +1,21 @@
 <template>
+  
   <div id="content">
     <navSection id="nav" />
-    <titleSection id="title" :title="recipe.title" :source="recipe.source" :time="recipe.time" :servings="recipe.servings" :tags="recipe.tags" />
+    <RouterView></RouterView>
+    <!-- <titleSection id="title" :title="recipe.title" :source="recipe.source" :time="recipe.time" :servings="recipe.servings" :tags="recipe.tags" />
     <ingredientsSection id="ingredients" :ingredients="recipe.ingredients" />
-    <directionsSection id="directions" :directions="recipe.directions" />
+    <directionsSection id="directions" :directions="recipe.directions" /> -->
   </div>
 </template>
 
 <script setup>
-  import recipe from './static/baked_beans.json';
+  // import {router} from './main'
+  // import recipe from './static/baked_beans.json';
   import navSection from './components/nav_section.vue'
-  import titleSection from './components/title_section.vue'
-  import ingredientsSection from './components/ingredients_section.vue'
-  import directionsSection from './components/directions_section.vue'
+  // import titleSection from './components/title_section.vue'
+  // import ingredientsSection from './components/ingredients_section.vue'
+  // import directionsSection from './components/directions_section.vue'
 </script>
 
 <style lang="scss">

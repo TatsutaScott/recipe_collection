@@ -1,9 +1,8 @@
 <template>
     <div id="navDiv">
-        
-        
         <div id="navOptions">
-            <span class="navOption">index</span>
+            <router-link to="/index">index</router-link>
+            
             <span class="navOption">about</span>
             <input type="search" id="search" class="navOption" placeholder="search">
         </div>
