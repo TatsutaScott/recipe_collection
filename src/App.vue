@@ -28,24 +28,20 @@
   padding: 0;
 
   display: grid;
-  grid-template-columns: 1fr 3fr 3fr   ;
-  grid-template-rows: 1fr 5fr;
-  grid-template-areas:
-    "n t t"
-    "n i d";
+  grid-template-columns: 1fr 6fr;
 }
-#nav{
-  grid-area: n;
-}
-#ingredients{
-  grid-area: i;
-}
-#title{
-  grid-area: t; 
-}
-#directions{
-  grid-area: d;
-}
+// #nav{
+//   grid-area: n;
+// }
+// #ingredients{
+//   grid-area: i;
+// }
+// #title{
+//   grid-area: t; 
+// }
+// #directions{
+//   grid-area: d;
+// }
 body{
 overflow: hidden;
 margin: 0;

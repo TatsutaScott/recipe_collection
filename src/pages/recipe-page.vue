@@ -17,41 +17,42 @@
 </script>
 
 <style lang="scss">
-@import './assets/styles/globalStyles.scss';
+// @import './assets/styles/globalStyles.scss';
 
-#content {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+// #content {
+//     width: 100vw;
+//     height: 100vh;
+//     margin: 0;
+//     padding: 0;
 
-    display: grid;
-    grid-template-columns: 1fr 3fr 3fr;
-    grid-template-rows: 1fr 5fr;
-    grid-template-areas:
-        "n t t"
-        "n i d";
-}
+//     display: grid;
+//     grid-template-columns: 1fr 3fr 3fr;
+//     grid-template-rows: 1fr 5fr;
+//     grid-template-areas:
+//         "n t t"
+//         "n i d";
+// }
 
-#nav {
-    grid-area: n;
-}
+// #nav {
+//     grid-area: n;
+// }
 
-#ingredients {
-    grid-area: i;
-}
+// #ingredients {
+//     grid-area: i;
+// }
 
-#title {
-    grid-area: t;
-}
+// #title {
+//     grid-area: t;
+// }
 
-#directions {
-    grid-area: d;
-}
+// #directions {
+//     grid-area: d;
+// }
 
-body {
-    overflow: hidden;
-    margin: 0;
-    font-family: $base-font;
-}
+// body {
+//     overflow: hidden;
+//     margin: 0;
+//     font-family: $base-font;
+// }
 
+</style>
