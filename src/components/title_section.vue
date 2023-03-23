@@ -1,5 +1,4 @@
 <template>
-    <div>
     <div id="titleSection">
         <h1>{{ props.title }}</h1>
         <div id="infoSection">
@@ -20,10 +19,9 @@
                 <span class="descriptor">Tags: </span>
                 <span class="tag" v-for="tag in props.tags" :key="tag"> {{ tag }}</span>
             </div>
-        </div>
-        
+        </div>   
     </div>
-    </div>
+
 </template>
 
 <script setup>
@@ -47,6 +45,7 @@ function isURL(text) {
 #title{
     @include container;
     @include flex;
+    
     // padding: auto 2rem !important;
 }
 #titleSection{

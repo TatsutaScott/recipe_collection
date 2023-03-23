@@ -1,5 +1,4 @@
 <template>
-  
   <div id="content">
     <navSection id="nav" />
     <RouterView></RouterView>

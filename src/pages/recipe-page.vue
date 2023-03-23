@@ -1,73 +1,40 @@
 <template>
-    <div id="content">
-        <h1>{{ props.name }}</h1>
-        <h1 >{{ result }}</h1>
-        <!-- <titleSection id="title" :title="recipe.title" :source="recipe.source" :time="recipe.time" :servings="recipe.servings" :tags="recipe.tags" />
-    <ingredientsSection id="ingredients" :ingredients="recipe.ingredients" />
-    <directionsSection id="directions" :directions="recipe.directions" /> -->
+  <div id="recipe">
+    <div class="title">
+      <titleSection v-if="recipe" id="title" :title="recipe.title" :source="recipe.source" :time="recipe.time" :servings="recipe.servings" :tags="recipe.tags" />
     </div>
+    <div class="details">
+      <ingredientsSection v-if="recipe" id="ingredients" :ingredients="recipe.ingredients" />
+      <directionsSection v-if="recipe" id="directions" :directions="recipe.directions" />
+    </div>
+  </div>
 </template>
 
 <script setup>
-import {defineProps, ref} from 'vue';
+import { defineProps, ref } from 'vue';
+
+import titleSection from '../components/title_section.vue'
+import ingredientsSection from '../components/ingredients_section.vue'
+import directionsSection from '../components/directions_section.vue'
 
 const props = defineProps({
   name: String
 }); 
-const result = ref(null);
-import(`../static/${props.name}.json`).then(data =>result.value = data.title)
 
-// onMounted(() => {
-//   const response = fetch(`../static/test.json`);
-//   response.then()
-//   console.log(response);
-// // })
-
-// import {router} from './main'
-// // import recipe from './static/baked_beans.json';
-// import navSection from './components/nav_section.vue'
-  // import titleSection from './components/title_section.vue'
-  // import ingredientsSection from './components/ingredients_section.vue'
-  // import directionsSection from './components/directions_section.vue'
+const recipe = ref(null);
+import(`../static/${props.name}.json`)
+  .then(data =>recipe.value = data);
 </script>
 
 <style lang="scss">
-// @import './assets/styles/globalStyles.scss';
+@import '@/assets/styles/globalStyles.scss';
 
-// #content {
-//     width: 100vw;
-//     height: 100vh;
-//     margin: 0;
-//     padding: 0;
-
-//     display: grid;
-//     grid-template-columns: 1fr 3fr 3fr;
-//     grid-template-rows: 1fr 5fr;
-//     grid-template-areas:
-//         "n t t"
-//         "n i d";
-// }
-
-// #nav {
-//     grid-area: n;
-// }
-
-// #ingredients {
-//     grid-area: i;
-// }
-
-// #title {
-//     grid-area: t;
-// }
-
-// #directions {
-//     grid-area: d;
-// }
-
-// body {
-//     overflow: hidden;
-//     margin: 0;
-//     font-family: $base-font;
-// }
-
+#recipe{
+  display: flex; 
+  flex-direction: column;
+}
+.details{
+  display: flex;
+  flex-direction: row;
+}
 </style>
