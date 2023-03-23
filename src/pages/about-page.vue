@@ -1,5 +1,7 @@
 <template>
-    <h1>Front</h1>
+    <div id="about">
+        <h1>about</h1>
+    </div>
 </template>
 
 <script setup>

@@ -2,12 +2,10 @@
     <div id="navDiv">
         <div id="navOptions">
             <router-link to="/index">index</router-link>
-            
-            <span class="navOption">about</span>
-            <input type="search" id="search" class="navOption" placeholder="search">
+            <router-link to="/about">about</router-link>
         </div>
         <div id="siteTitle">
-            <span>龍田食堂</span>
+            <router-link to="/">龍田食堂</router-link>
         </div>
         <div id="viewOptions">
                 <span id="small">A</span>

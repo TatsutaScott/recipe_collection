@@ -1,5 +1,5 @@
 <template>
-    <div id="content">
+    <div id="index">
         <h1>index</h1>
         <router-link to="/recipe/cacio-e-pepe">cacio e pepe</router-link>
         <router-link to="/recipe/baked-beans">baked beans</router-link>
