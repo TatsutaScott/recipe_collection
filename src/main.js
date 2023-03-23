@@ -13,7 +13,11 @@ const router = createRouter({
         {path: '/', component: front}, 
         {path: '/index', component: index}, 
         {path: '/about', component: about},
-        {path: '/recipe/:recipe',  component: recipe}
+        {
+            path: '/recipe/:name',  
+            component: recipe,  
+            props:true
+        }
     ]
 })
 createApp(App).use(router).mount('#app');

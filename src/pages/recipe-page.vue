@@ -1,6 +1,7 @@
 <template>
     <div id="content">
-        <h1>recipe</h1>
+        <h1>{{ props.name }}</h1>
+        <h1 >{{ result }}</h1>
         <!-- <titleSection id="title" :title="recipe.title" :source="recipe.source" :time="recipe.time" :servings="recipe.servings" :tags="recipe.tags" />
     <ingredientsSection id="ingredients" :ingredients="recipe.ingredients" />
     <directionsSection id="directions" :directions="recipe.directions" /> -->
@@ -8,6 +9,20 @@
 </template>
 
 <script setup>
+import {defineProps, ref} from 'vue';
+
+const props = defineProps({
+  name: String
+}); 
+const result = ref(null);
+import(`../static/${props.name}.json`).then(data =>result.value = data.title)
+
+// onMounted(() => {
+//   const response = fetch(`../static/test.json`);
+//   response.then()
+//   console.log(response);
+// // })
+
 // import {router} from './main'
 // // import recipe from './static/baked_beans.json';
 // import navSection from './components/nav_section.vue'

@@ -101,7 +101,7 @@ class Particle{
         if(mode == 'dot'){
             this.ctx.fillRect(this.position.x, this.position.y, 4, 4);
         }else{
-            this.ctx.font = '12pt arial'
+            this.ctx.font = '8pt arial'
             this.ctx.fillText(this.emoji, this.position.x, this.position.y);
         }
     }

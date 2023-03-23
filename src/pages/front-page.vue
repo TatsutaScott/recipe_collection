@@ -1,9 +1,7 @@
 <template>
     <div ref="section" class="page">
-        <!-- <h1>Front</h1> -->
         <canvas ref="myCanvas"></canvas>
     </div>
-    
 </template>
 
 <script setup>
@@ -16,8 +14,8 @@ const myCanvas = ref(null);
 const section = ref(null);
 let ctx;
 
-const cols = 40;
-const rows = 30;
+const cols = 30;
+const rows = 22;
 const particles = [];
 let particle;
 let util;
@@ -56,7 +54,7 @@ const setup = () => {
 }
 
 const draw = () =>{
-    util.background('white');
+    util.background('white')
     particle.update('bounce');
     for (let p of particles) {
         p.closeTo(particle.position, 100);

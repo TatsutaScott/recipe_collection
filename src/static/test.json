@@ -1,0 +1,10 @@
+{
+    "title": "test",
+    "source": "https://google.com/",
+    "time": 60,
+    "servings": 10,
+    "tags": [
+        "test",
+        "food"
+    ]
+}
