@@ -17,6 +17,34 @@
       "slug": "baked-beans",
       "tags": ["Side", "American"],
       "id": 2
+    },
+    {
+      "title": "拍黃瓜 Smashed Cucumber Salad",
+      "slug": "smashed-cucumber",
+      "date": [27, 3, 2023],
+      "tags": ["Side", "Chinese", "Salad"],
+      "id": 3
+    },
+    {
+      "title": "麻婆豆腐 Mapo Tofu",
+      "slug": "mapo-tofu",
+      "date": [27, 3, 2023],
+      "tags": ["Main", "Chinese"],
+      "id": 4
+    },
+    {
+      "title": "Chocolate Chip Cookies",
+      "slug": "chocolate-chip-cookies",
+      "date": [27, 3, 2023],
+      "tags": ["Desert", "Cookie"],
+      "id": 5
+    },
+    {
+      "title": "Snickerdoodles",
+      "slug": "snickerdoodle",
+      "date": [27, 3, 2023],
+      "tags": ["Desert", "Cookie"],
+      "id": 6
     }
   ]
 }
