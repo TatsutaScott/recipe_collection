@@ -1,0 +1,22 @@
+{
+  "recipes": [
+    {
+      "title": "Test",
+      "slug": "test-recipe",
+      "tags": ["Test", "Food"],
+      "id": 0
+    },
+    {
+      "title": "Cacio e Pepe",
+      "slug": "cacio-e-pepe",
+      "tags": ["Main", "Italian", "Pasta"],
+      "id": 1
+    },
+    {
+      "title": "Southern Baked Beans",
+      "slug": "baked-beans",
+      "tags": ["Side", "American"],
+      "id": 2
+    }
+  ]
+}

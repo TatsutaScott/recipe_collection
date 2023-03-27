@@ -13,7 +13,7 @@ $laptop: 769px;
 
 //other variables
 $base-font-size: 1.25rem;
-$base-font: 'Migra Extra bold';
+$base-font: 'Helvetica'; //'Migra';
 
 //util classes
 .note {
@@ -61,8 +61,7 @@ $base-font: 'Migra Extra bold';
 
 }
 
-// @font-face {
-//     font-family: 'Migra Extra bold';
-//     src: url('../fonts/PPMigra-Extrabold.otf');
-
-// }
+@font-face {
+    font-family: 'Migra';
+    src: url('C:/Users/tatsu/code/vue/recipe/src/assets/fonts/PPMigra-Extrabold.otf');
+}

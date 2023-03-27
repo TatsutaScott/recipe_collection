@@ -1,13 +1,30 @@
 <template>
-    <div id="index">
-        <h1>index</h1>
-        <router-link to="/recipe/cacio-e-pepe">cacio e pepe</router-link>
-        <router-link to="/recipe/baked-beans">baked beans</router-link>
-        <router-link to="/recipe/test">test</router-link>
+  <div id="index">
+    <h1>index</h1>
+    <div id="cardGallery">
+      <recipeCard
+        v-for="recipe in data.recipes"
+        :key="recipe.id"
+        :title="recipe.title"
+        :tags="recipe.tags"
+        :slug="recipe.slug"
+      />
     </div>
+  </div>
 </template>
 
 <script setup>
+import data from "../static/tableOfContents.json";
+import recipeCard from "../components/recipe_card.vue";
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+#index {
+  padding: 2rem;
+}
+#cardGallery {
+  display: grid;
+  margin-top: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+</style>
