@@ -1,6 +1,6 @@
 <template>
   <div id="recipe">
-    <div class="title">
+    <div id="titleContainer">
       <titleSection
         v-if="recipe"
         id="title"
@@ -13,7 +13,7 @@
       />
     </div>
 
-    <div class="details">
+    <div id="detailsContainer">
       <ingredientsSection
         v-if="recipe"
         id="ingredients"
@@ -51,8 +51,10 @@ import(`../static/${props.name}.json`).then((data) => (recipe.value = data));
   display: flex;
   flex-direction: column;
 }
-.details {
+// #titleContainer{}
+#detailsContainer {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
 </style>

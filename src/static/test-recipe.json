@@ -1,0 +1,76 @@
+{
+  "title": "Test Recipe",
+  "source": "https://www.youtube.com/",
+  "time": {
+    "amount": 12,
+    "unit": "minutes"
+  },
+  "servings": {
+    "amount": 12,
+    "unit": "Tests"
+  },
+  "date": [1, 1, 1912],
+  "tags": ["test", "not", "a", " recipe"],
+  "ingredients": [
+    {
+      "title": "Section 1",
+      "notes": null,
+      "contents": [
+        {
+          "name": "Ingredient 1",
+          "amount": 1,
+          "unit": "Cup",
+          "note": "whole number"
+        },
+        {
+          "name": "Ingredient 2",
+          "amount": [1, 4],
+          "unit": "cup",
+          "note": "range of numbers"
+        },
+        {
+          "name": "Ingredient 3",
+          "amount": 12.5,
+          "unit": "teaspoon",
+          "note": "decimal"
+        },
+        {
+          "name": "Ingredient 4",
+          "amount": { "numerator": 2, "denominator": 3 },
+          "unit": "Cup",
+          "note": "fraction"
+        }
+      ]
+    },
+    {
+      "title": "Section 2",
+      "notes": "optional",
+      "contents": [
+        {
+          "name": "Ingredient 1",
+          "amount": 1,
+          "unit": "Cup",
+          "note": "whole number"
+        },
+        {
+          "name": "Ingredient 2",
+          "amount": [1, 4],
+          "unit": "cup",
+          "note": "range of numbers"
+        },
+        {
+          "name": "Ingredient 3",
+          "amount": 12.5,
+          "unit": "teaspoon",
+          "note": "decimal"
+        },
+        {
+          "name": "Ingredient 4",
+          "amount": { "numerator": 2, "denominator": 3 },
+          "unit": "Cup",
+          "note": "fraction"
+        }
+      ]
+    }
+  ]
+}
