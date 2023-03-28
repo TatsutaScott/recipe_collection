@@ -1,7 +1,10 @@
 {
   "title": "Cacio e Pepe",
   "source": "https://www.bonappetit.com/recipe/cacio-e-pepe",
-  "time": 20,
+  "time": {
+    "amount": 20,
+    "unit": "minutes"
+  },
   "servings": {
     "amount": 4,
     "unit": "Serving"

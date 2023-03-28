@@ -80,6 +80,20 @@
       "date": [28, 3, 2023],
       "tags": ["Breakfast", "Main"],
       "id": 11
+    },
+    {
+      "title": "Eggplant Parmesan",
+      "slug": "eggplant-parm",
+      "tags": ["Main", "Italian"],
+      "date": [28, 3, 2023],
+      "id": 12
+    },
+    {
+      "title": "Lamb Neck Ragu",
+      "slug": "lamb-ragu",
+      "date": [28, 3, 2023],
+      "tags": ["Main", "Italian", "Pasta"],
+      "id": 13
     }
   ]
 }
