@@ -13,7 +13,6 @@
   "tags": ["Main", "Italian", "Pasta"],
   "ingredients": [
     {
-      "subsection": true,
       "title": "Main Ingredients",
       "contents": [
         {
@@ -42,7 +41,7 @@
         },
         {
           "name": "Pecorino",
-          "amount": 0.6666666666666666666666,
+          "amount": 0.666,
           "note": "finely grated",
           "unit": "Cups"
         }
