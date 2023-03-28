@@ -1,8 +1,14 @@
 {
   "title": "Brown Butter Wedding Cookies",
   "source": "https://www.bonappetit.com/recipe/brown-butter-wedding-cookies",
-  "time": 180,
-  "servings": 24,
+  "time": {
+    "amount": 3,
+    "unit": "hours"
+  },
+  "servings": {
+    "amount": 24,
+    "unit": "cookie"
+  },
   "date": [28, 3, 2023],
   "tags": ["Desert", "Cookie"],
   "ingredients": [

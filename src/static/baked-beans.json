@@ -1,8 +1,14 @@
 {
   "title": "Southern Baked Beans",
   "source": "https://addapinch.com/southern-baked-beans-recipe/",
-  "time": 60,
-  "servings": 10,
+  "time": {
+    "amount": 1,
+    "unit": "hour"
+  },
+  "servings": {
+    "amount": 10,
+    "unit": "servings"
+  },
   "tags": ["Side", "American"],
   "ingredients": [
     {

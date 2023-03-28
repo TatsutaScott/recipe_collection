@@ -1,8 +1,14 @@
 {
   "title": "拍黃瓜 Smashed Cucumber Salad",
   "source": "https://thewoksoflife.com/smashed-asian-cucumber-salad/",
-  "time": 10,
-  "servings": 4,
+  "time": {
+    "amount": 10,
+    "unit": "minutes"
+  },
+  "servings": {
+    "amount": 4,
+    "unit": "Serving"
+  },
   "date": "1.1.2022",
   "tags": ["Side", "Chinese", "Salad"],
   "ingredients": [

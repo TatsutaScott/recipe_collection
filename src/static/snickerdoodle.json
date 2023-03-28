@@ -1,8 +1,14 @@
 {
   "title": "Snickerdoodles",
   "source": "https://www.modernhoney.com/the-best-snickerdoodle-cookie-recipe/",
-  "time": 45,
-  "servings": 24,
+  "time": {
+    "amount": 45,
+    "unit": "minutes"
+  },
+  "servings": {
+    "amount": 24,
+    "unit": "cookie"
+  },
   "date": [27, 3, 2023],
   "tags": ["Desert", "Cookie"],
   "ingredients": [

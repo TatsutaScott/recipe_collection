@@ -1,7 +1,10 @@
 {
   "title": "French Toast",
   "source": "https://www.justonecookbook.com/french-toast/",
-  "time": 35,
+  "time": {
+    "amount": 35,
+    "unit": "minutes"
+  },
   "servings": {
     "amount": 4,
     "unit": "Serving"

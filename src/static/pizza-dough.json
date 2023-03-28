@@ -1,7 +1,10 @@
 {
   "title": "Pizza Dough",
   "source": "https://www.nonnabox.com/authentic-italian-pizza-dough-recipe/",
-  "time": 240,
+  "time": {
+    "amount": 4,
+    "unit": "hours"
+  },
   "servings": {
     "amount": 4,
     "unit": "Pizza"

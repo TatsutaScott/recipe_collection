@@ -1,7 +1,10 @@
 {
   "title": "Crumb Coffee Cake",
   "source": "https://lilluna.com/recipe-tip-deal-and-video-of-the-week-quick-coffee-cake/",
-  "time": 40,
+  "time": {
+    "amount": 40,
+    "unit": "minutes"
+  },
   "servings": {
     "amount": 15,
     "unit": "Serving"

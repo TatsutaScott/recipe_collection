@@ -1,8 +1,14 @@
 {
   "title": "Chocolate Chip Cookies",
   "source": "https://www.bonappetit.com/recipe/bas-best-chocolate-chip-cookies",
-  "time": 35,
-  "servings": 16,
+  "time": {
+    "amount": 35,
+    "unit": "minutes"
+  },
+  "servings": {
+    "amount": 16,
+    "unit": "cookie"
+  },
   "date": [27, 3, 2023],
   "tags": ["Desert", "Cookie"],
   "ingredients": [

@@ -3,18 +3,21 @@
     {
       "title": "Test",
       "slug": "test-recipe",
+      "date": [1, 1, 2023],
       "tags": ["Test", "Food"],
       "id": 0
     },
     {
       "title": "Cacio e Pepe",
       "slug": "cacio-e-pepe",
+      "date": [27, 3, 2023],
       "tags": ["Main", "Italian", "Pasta"],
       "id": 1
     },
     {
       "title": "Southern Baked Beans",
       "slug": "baked-beans",
+      "date": [27, 3, 2023],
       "tags": ["Side", "American"],
       "id": 2
     },
