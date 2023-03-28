@@ -45,6 +45,41 @@
       "date": [27, 3, 2023],
       "tags": ["Desert", "Cookie"],
       "id": 6
+    },
+    {
+      "title": "Brown Butter Wedding Cookies",
+      "slug": "wedding-cookies",
+      "date": [28, 3, 2023],
+      "tags": ["Desert", "Cookie"],
+      "id": 7
+    },
+    {
+      "title": "All Purpose Biscuits",
+      "slug": "biscuits",
+      "date": [28, 3, 2023],
+      "tags": ["Bread", "Dinner", "American", "Side"],
+      "id": 8
+    },
+    {
+      "title": "Pizza Dough",
+      "slug": "pizza-dough",
+      "date": [28, 3, 2023],
+      "tags": ["Bread", "Dinner", "Italian", "Main"],
+      "id": 9
+    },
+    {
+      "title": "Crumb Coffee Cake",
+      "slug": "crumb-coffee-cake",
+      "date": [28, 3, 2023],
+      "tags": ["Breakfast", "Cake", "Main"],
+      "id": 10
+    },
+    {
+      "title": "French Toast",
+      "slug": "french-toast",
+      "date": [28, 3, 2023],
+      "tags": ["Breakfast", "Main"],
+      "id": 11
     }
   ]
 }

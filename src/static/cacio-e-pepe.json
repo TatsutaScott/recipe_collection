@@ -2,8 +2,11 @@
   "title": "Cacio e Pepe",
   "source": "https://www.bonappetit.com/recipe/cacio-e-pepe",
   "time": 20,
-  "servings": 4,
-  "date": "1.1.2022",
+  "servings": {
+    "amount": 4,
+    "unit": "Serving"
+  },
+  "date": [28, 3, 2023],
   "tags": ["Main", "Italian", "Pasta"],
   "ingredients": [
     {
