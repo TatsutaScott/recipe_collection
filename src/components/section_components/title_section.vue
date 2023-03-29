@@ -4,7 +4,9 @@
     <div id="infoSection">
       <div class="info">
         <span class="descriptor">Source: </span>
-        <a v-if="isURL(props.source)" :href="props.source">link</a>
+        <a v-if="isURL(props.source)" :href="props.source" class="plain link"
+          >link</a
+        >
         <span v-else>{{ props.source }}</span>
       </div>
       <div class="info">
@@ -74,7 +76,7 @@ function dateToString(dateArray) {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/styles/globalStyles.scss";
+@import "@/assets/styles/globalStyles.scss";
 
 #titleSection {
   @include basic;

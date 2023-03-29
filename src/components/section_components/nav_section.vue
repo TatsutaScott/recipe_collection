@@ -1,13 +1,13 @@
 <template>
   <div id="navDiv">
     <div id="navOptions">
-      <router-link to="/index">index</router-link>
-      <router-link to="/about">about</router-link>
+      <router-link to="/index" class="plain">index</router-link>
+      <router-link to="/about" class="plain">about</router-link>
     </div>
     <div id="siteTitle">
-      <router-link to="/">龍田食堂</router-link>
+      <router-link to="/" class="plain">龍田食堂</router-link>
     </div>
-    <div id="viewOptions">
+    <!-- <div id="viewOptions">
       <span id="small">A</span>
       <span id="medium">A</span>
       <span id="large">A</span>
@@ -21,21 +21,22 @@
       <span @click="toggleDarkMode" v-else class="material-symbols-outlined a"
         >light_mode</span
       >
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+// import { ref } from "vue";
 
-const darkMode = ref(false);
-function toggleDarkMode() {
-  darkMode.value = !darkMode.value;
-}
+// const darkMode = ref(false);
+// // function toggleDarkMode() {
+// //   darkMode.value = !darkMode.value;
+// // }
 </script>
 
 <style lang="scss">
-@import "../assets/styles/globalStyles.scss";
+@import "@/assets/styles/globalStyles.scss";
+
 #nav {
   @include flex(column, flex-end, center);
   @include container;
@@ -56,47 +57,48 @@ function toggleDarkMode() {
     margin: 0.25rem 0;
   }
 }
-#viewOptions {
-  @include flex(row, space-between, baseline);
-  width: 50%;
-  color: $color-weak;
-}
-#small {
-  font-size: $base-font-size * 0.75;
-}
 
-#medium {
-  font-size: $base-font-size * 1;
-}
+// #viewOptions {
+//   @include flex(row, space-between, baseline);
+//   width: 50%;
+//   color: $color-weak;
+// }
+// #small {
+//   font-size: $base-font-size * 0.75;
+// }
 
-#large {
-  font-size: $base-font-size * 1.5;
-}
+// #medium {
+//   font-size: $base-font-size * 1;
+// }
+
+// #large {
+//   font-size: $base-font-size * 1.5;
+// }
 #siteTitle {
   font-size: 2rem;
   color: $color-primary;
 }
-#search {
-  border-radius: 5px;
-  width: 10em;
-  border: 1px solid $color-weak;
-  appearance: none;
-  outline: none;
-}
-#search::placeholder {
-  color: $color-weak;
-}
-#search:focus {
-  border: 2px solid $color-weak;
-}
-#search::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-  position: relative;
-  right: 1px;
-  content: URL("../assets/icons/close_FILL0_wght400_GRAD0_opsz48.svg");
-  width: 20px;
-  height: 20px;
-}
+// #search {
+//   border-radius: 5px;
+//   width: 10em;
+//   border: 1px solid $color-weak;
+//   appearance: none;
+//   outline: none;
+// }
+// #search::placeholder {
+//   color: $color-weak;
+// }
+// #search:focus {
+//   border: 2px solid $color-weak;
+// }
+// #search::-webkit-search-cancel-button {
+//   -webkit-appearance: none;
+//   position: relative;
+//   right: 1px;
+//   content: URL("../assets/icons/close_FILL0_wght400_GRAD0_opsz48.svg");
+//   width: 20px;
+//   height: 20px;
+// }
 // #navDiv{
 //     // position: fixed;
 //     // top: 0;

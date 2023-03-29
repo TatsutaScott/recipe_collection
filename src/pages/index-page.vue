@@ -14,8 +14,8 @@
 </template>
 
 <script setup>
-import data from "../static/tableOfContents.json";
-import recipeCard from "../components/recipe_card.vue";
+import data from "@/static/tableOfContents.json";
+import recipeCard from "@/components/low_level_components/recipe_card.vue";
 </script>
 
 <style lang="scss">

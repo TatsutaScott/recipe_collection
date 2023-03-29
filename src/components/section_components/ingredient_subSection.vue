@@ -20,7 +20,7 @@
 
 <script setup>
 import { defineProps, defineExpose } from "vue";
-import Ingredient_comp from "./ingredient_comp.vue";
+import Ingredient_comp from "../low_level_components/ingredient_comp.vue";
 
 const props = defineProps({
   ingredientGroup: Object,

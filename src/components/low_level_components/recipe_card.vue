@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="`/recipe/${props.slug}`" class="recipeCardContainer">
+  <router-link :to="`/recipe/${props.slug}`" class="recipeCardContainer plain">
     <h3 class="cardTitle">{{ props.title }}</h3>
     <div class="tagContainer">
       <span class="cardTag" v-for="tag in props.tags" :key="tag">{{
@@ -25,8 +25,7 @@ const props = defineProps({
   padding: 0.5rem;
   border: 1px solid black;
   border-radius: 20px;
-  color: black;
-  text-decoration: none;
+
   background-color: white;
 }
 .recipeCardContainer:hover {

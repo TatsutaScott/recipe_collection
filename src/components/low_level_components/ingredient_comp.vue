@@ -29,7 +29,7 @@ const props = defineProps(["name", "unit", "amount", "note"]);
   align-items: center;
   justify-content: left;
   border-bottom: 1px solid lightgray;
-  padding: 0.5em 0.5em;
+  padding: 1rem 0.5rem;
   .name {
     font-weight: 550;
   }

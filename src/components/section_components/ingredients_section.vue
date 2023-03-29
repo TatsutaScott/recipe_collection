@@ -53,7 +53,7 @@ const hideIngredients = ref(false);
 </script>
 
 <style lang="scss">
-@import "src/assets/styles/globalStyles.scss";
+@import "@/assets/styles/globalStyles.scss";
 #ingredients {
   @include container;
   @include basic;

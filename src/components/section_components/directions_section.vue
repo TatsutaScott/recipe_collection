@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import Directions_subSection from "./directions_subSection.vue";
+import Directions_subSection from "../section_components/directions_subSection.vue";
 import { defineProps } from "vue";
 const props = defineProps({
   directions: Object,
@@ -21,7 +21,7 @@ const props = defineProps({
 </script>
 
 <style lang="scss">
-@import "../assets/styles/globalStyles.scss";
+@import "@/assets/styles/globalStyles.scss";
 
 h2 {
   margin: 0;

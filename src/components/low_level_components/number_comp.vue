@@ -48,6 +48,7 @@ function findRemainder(fraction) {
 .frac > span {
   display: block;
   padding: 0.1em;
+  font-size: 0.75rem;
 }
 .frac span.bottom {
   border-top: thin solid black;

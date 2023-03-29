@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import navSection from "./components/nav_section.vue";
+import navSection from "./components/section_components/nav_section.vue";
 </script>
 
 <style lang="scss">

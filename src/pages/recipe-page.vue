@@ -32,9 +32,9 @@
 <script setup>
 import { defineProps, ref } from "vue";
 
-import titleSection from "../components/title_section.vue";
-import ingredientsSection from "../components/ingredients_section.vue";
-import directionsSection from "../components/directions_section.vue";
+import titleSection from "../components/section_components/title_section.vue";
+import ingredientsSection from "../components/section_components/ingredients_section.vue";
+import directionsSection from "../components/section_components/directions_section.vue";
 
 const props = defineProps({
   name: String,
@@ -50,7 +50,6 @@ import(`../static/${props.name}.json`).then((data) => (recipe.value = data));
 #recipe {
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 4fr;
   overflow-y: hidden;
 }
 // #titleContainer{}
