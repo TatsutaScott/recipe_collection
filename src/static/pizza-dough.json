@@ -13,8 +13,8 @@
   "tags": ["Bread", "Dinner", "Italian", "Main"],
   "ingredients": [
     {
-      "title": "Main Ingredients",
-      "optional": false,
+      "title": "",
+      "notes": null,
       "contents": [
         {
           "name": "00 Flour",

@@ -13,8 +13,8 @@
   "tags": ["Desert", "Cookie"],
   "ingredients": [
     {
-      "title": "Main Ingredients",
-      "optional": false,
+      "title": "",
+      "notes": null,
       "contents": [
         {
           "name": "All Purpose Flour",

@@ -14,7 +14,7 @@
   "ingredients": [
     {
       "title": "Main Ingredients",
-      "optional": false,
+      "notes": null,
       "contents": [
         {
           "name": "Large Eggs",
@@ -65,7 +65,7 @@
         "When the **butter** is melted and pan is hot, place the bread, facing the “dry” side DOWN. *The “dry” side is the side facing up in the image on the right.*",
         "Cook until the bottom is golden brown. Then turn over to cook the other side until golden.",
         "When both sides are nicely brown, transfer to the baking sheet.",
-        " Bake at **350ºF (*180ºC*)** for **6 minutes**. For a convection oven, reduce cooking temperature by **25ºF (*15ºC*)**."
+        "Bake at **350ºF (*180ºC*)** for **6 minutes**. For a convection oven, reduce cooking temperature by **25ºF (*15ºC*)**."
       ]
     }
   ]

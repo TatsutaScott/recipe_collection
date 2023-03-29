@@ -13,8 +13,8 @@
   "tags": ["Breakfast", "Cake", "Main"],
   "ingredients": [
     {
-      "title": "Main Ingredients",
-      "optional": false,
+      "title": "Cake",
+      "notes": null,
       "contents": [
         {
           "name": "Vegetable Oil",
@@ -75,7 +75,13 @@
         },
         {
           "name": "Butter",
-          "amount": [0.33333333, 0.5],
+          "amount": [
+            {
+              "numerator": 1,
+              "denominator": 3
+            },
+            0.5
+          ],
           "unit": "Cup",
           "note": "Melted"
         }

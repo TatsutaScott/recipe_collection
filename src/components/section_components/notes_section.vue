@@ -15,6 +15,7 @@
 <script setup>
 import { defineProps } from "vue";
 import Note from "@/components/low_level_components/note_comp.vue";
+
 const props = defineProps({
   notes: Array,
 });

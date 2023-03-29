@@ -19,6 +19,10 @@ const props = defineProps({
   display: flex;
   flex-direction: row;
   align-items: center;
+  p {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
 }
 .noteTitle {
   margin-right: 1rem;

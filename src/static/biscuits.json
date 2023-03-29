@@ -14,7 +14,7 @@
   "ingredients": [
     {
       "title": "Main Ingredients",
-      "optional": false,
+      "notes": null,
       "contents": [
         {
           "name": "All purpose flour",

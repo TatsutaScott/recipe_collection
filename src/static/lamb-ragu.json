@@ -13,8 +13,8 @@
   "tags": ["Main", "Italian", "Pasta"],
   "ingredients": [
     {
-      "subsection": true,
-      "title": "Main Ingredients",
+      "title": "",
+      "notes": null,
       "contents": [
         {
           "name": "Lamb Neck",

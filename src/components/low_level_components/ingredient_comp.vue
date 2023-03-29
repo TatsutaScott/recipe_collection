@@ -5,6 +5,7 @@
       <span> - </span>
       <Number_comp :val="props.amount[1]" />
     </div>
+    <div v-else-if="!props.amount"></div>
     <Number_comp v-else :val="props.amount" />
 
     <span class="unit">{{ props.unit.toLowerCase() }}</span>

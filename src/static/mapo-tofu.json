@@ -13,8 +13,8 @@
   "tags": ["Main", "Chinese"],
   "ingredients": [
     {
-      "title": "Main Ingredients",
-      "optional": false,
+      "title": "",
+      "notes": null,
       "contents": [
         {
           "name": "Vegetable Oil",
@@ -64,7 +64,10 @@
         },
         {
           "name": "Low Sodium Chicken Broth",
-          "amount": 0.333333333,
+          "amount": {
+            "numerator": 1,
+            "denominator": 3
+          },
           "unit": "Cup"
         },
         {
@@ -84,7 +87,7 @@
         },
         {
           "name": "Sugar",
-          "amount": 0.255,
+          "amount": 0.25,
           "unit": "Teaspoon"
         },
         {
