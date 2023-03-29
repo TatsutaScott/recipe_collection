@@ -21,7 +21,9 @@
       </div>
       <div class="info">
         <span class="descriptor">Tags: </span>
-        <span class="tag" v-for="tag in props.tags" :key="tag"> {{ tag }}</span>
+        <span class="chip" v-for="tag in props.tags" :key="tag">
+          {{ tag }}</span
+        >
       </div>
     </div>
   </div>
@@ -71,50 +73,34 @@ function dateToString(dateArray) {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import "../assets/styles/globalStyles.scss";
-#title {
-  @include container;
-  @include flex;
 
-  // padding: auto 2rem !important;
-}
 #titleSection {
-  // margin: auto 2rem;
   @include basic;
-  @include flex(row, flex-start, baseline);
+  @include flex(row, space-between, center);
 }
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+}
+
 #infoSection {
   @include flex(row);
   margin-left: 3em;
 }
-h1 {
-  font-size: 3em;
-  margin: 0;
-}
-.tag {
-  font-size: 0.75em;
-  padding: 0.125em 0.5em;
-  margin-right: 0.5em;
-  border: 1px solid $color-weak;
-  border-radius: 5px;
-  background-color: $color-weak;
-  color: white;
-  transition: background-color 0.25s ease-out 50ms;
-}
-.tag:hover {
-  background-color: black;
-  border: 1px solid black;
-}
 
 .info {
-  margin-right: 1em;
+  margin-left: 1rem;
   display: flex;
   align-items: center;
+  font-size: 1.25rem;
 }
 .descriptor {
   color: $color-weak;
-  font-size: 1em;
-  margin-right: 0.25em;
+
+  margin-right: 0.25rem;
 }
 </style>

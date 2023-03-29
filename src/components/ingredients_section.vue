@@ -69,71 +69,71 @@ const hideIngredients = ref(false);
 #ingredientList {
   width: 100%;
 }
-#multipliers {
-  @include flex(row, flex-end, center);
-  span {
-    margin-left: 0.25em;
-  }
-}
-// .menuToggle {
-//     border: none;
-//     color: $color-weak;
-//     background: none;
-// }
-// #ingredients{
-//     margin: 2em 0;
-// }
-//
-// #ingredientHeader>h2{
-//     margin: 0.25em 0;
-// }
-// #multipliers{
-//     margin: auto 0;
-//     display: flex;
-//     align-items: center;
-// }
-// #multipliers>span{
+// #multipliers {
+//   @include flex(row, flex-end, center);
+//   span {
 //     margin-left: 0.25em;
+//   }
 // }
-// #ingredientList{
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
+// // .menuToggle {
+// //     border: none;
+// //     color: $color-weak;
+// //     background: none;
+// // }
+// // #ingredients{
+// //     margin: 2em 0;
+// // }
+// //
+// // #ingredientHeader>h2{
+// //     margin: 0.25em 0;
+// // }
+// // #multipliers{
+// //     margin: auto 0;
+// //     display: flex;
+// //     align-items: center;
+// // }
+// // #multipliers>span{
+// //     margin-left: 0.25em;
+// // }
+// // #ingredientList{
+// //     display: grid;
+// //     grid-template-columns: 1fr 1fr;
+// // }
+
+// #custom {
+//   position: relative;
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+// }
+// #customValue {
+//   margin-left: 1em;
+//   max-width: 4em;
+// }
+// // .note{
+// //     color: $color-weak;
+// //     font-style: italic;
+// //     font-weight: 50;
+// //     font-size: 1em;
+// //     margin-left: 1em;
+// // }
+
+// .active {
+//   padding: 0.0525em 0.35em;
+//   border: 1px solid $color-weak;
+//   border-radius: 0.75rem;
+//   background-color: $color-weak;
+//   color: $color-white;
+//   transition: background-color 0.25s ease-out 50ms;
+//   transition: border 0.25s ease-out 50ms;
 // }
 
-#custom {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#customValue {
-  margin-left: 1em;
-  max-width: 4em;
-}
-// .note{
-//     color: $color-weak;
-//     font-style: italic;
-//     font-weight: 50;
-//     font-size: 1em;
-//     margin-left: 1em;
+// .basic {
+//   color: $color-weak;
+//   padding: 0.125em 0.5em;
 // }
 
-.active {
-  padding: 0.0525em 0.35em;
-  border: 1px solid $color-weak;
-  border-radius: 0.75rem;
-  background-color: $color-weak;
-  color: $color-white;
-  transition: background-color 0.25s ease-out 50ms;
-  transition: border 0.25s ease-out 50ms;
-}
-
-.basic {
-  color: $color-weak;
-  padding: 0.125em 0.5em;
-}
-
-.button {
-  cursor: pointer;
-}
+// .button {
+//   cursor: pointer;
+// }
 </style>

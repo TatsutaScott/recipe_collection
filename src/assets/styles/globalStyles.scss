@@ -23,6 +23,21 @@ $base-font: 'Helvetica'; //'Migra';
     font-size: 75% !important;
 }
 
+.chip{
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+    margin-right: 0.5rem;
+    border: 1px solid $color-weak;
+    border-radius: 5px;
+    background-color: $color-weak;
+    color: white;
+    transition: background-color 0.25s ease-out 50ms;
+}
+.chip:hover {
+    background-color: black;
+    border: 1px solid black;
+}
+
 //utilities
 @mixin flex($direction: row, $spacing: flex-start, $align: center) {
     display: flex;
@@ -37,6 +52,7 @@ $base-font: 'Helvetica'; //'Migra';
     padding: 2rem;
     border: 0.5px solid $color-weak;
     background-color: $color-white;
+    overflow-y: auto;
 }
 
 @mixin scroll {
@@ -58,7 +74,6 @@ $base-font: 'Helvetica'; //'Migra';
 ::-webkit-scrollbar-thumb {
     background: $color-weak;
     border-radius: 10px;
-
 }
 
 @font-face {

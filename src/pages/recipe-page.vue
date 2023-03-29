@@ -3,7 +3,7 @@
     <div id="titleContainer">
       <titleSection
         v-if="recipe"
-        id="title"
+        id="titleSection"
         :title="recipe.title"
         :source="recipe.source"
         :time="recipe.time"
@@ -16,13 +16,13 @@
     <div id="detailsContainer">
       <ingredientsSection
         v-if="recipe"
-        id="ingredients"
+        id="ingredientsSection"
         :ingredients="recipe.ingredients"
       />
 
       <directionsSection
         v-if="recipe"
-        id="directions"
+        id="directionsSection"
         :directions="recipe.directions"
       />
     </div>
@@ -48,13 +48,27 @@ import(`../static/${props.name}.json`).then((data) => (recipe.value = data));
 @import "@/assets/styles/globalStyles.scss";
 
 #recipe {
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  overflow-y: hidden;
 }
 // #titleContainer{}
 #detailsContainer {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: 87.5vh;
+}
+
+#titleContainer {
+  @include container();
+  height: 12.5vh;
+}
+
+#ingredientsSection {
+  @include container();
+}
+#directionsSection {
+  @include container();
 }
 </style>

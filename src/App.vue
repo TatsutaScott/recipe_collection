@@ -6,13 +6,13 @@
 </template>
 
 <script setup>
-import navSection from './components/nav_section.vue'
+import navSection from "./components/nav_section.vue";
 </script>
 
 <style lang="scss">
-@import './assets/styles/globalStyles.scss';
+@import "./assets/styles/globalStyles.scss";
 
-#content{
+#content {
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -20,28 +20,18 @@ import navSection from './components/nav_section.vue'
 
   display: grid;
   grid-template-columns: 1fr 6fr;
+  // overflow: hidden;
 }
-// #nav{
-//   grid-area: n;
-// }
-// #ingredients{
-//   grid-area: i;
-// }
-// #title{
-//   grid-area: t; 
-// }
-// #directions{
-//   grid-area: d;
-// }
-body{
-  overflow: hidden;
+
+body {
+  // overflow: hidden;
   margin: 0;
   font-family: $base-font;
 }
-// body{
+// body {
 //   font-family: Helvetica;
-//   background-color: $color-white;
-//   color:$color-black;
+//   background-color: white;
+//   color: black;
 //   margin: 0;
 // }
 // // body::-webkit-scrollbar{
@@ -57,7 +47,7 @@ body{
 //   margin-bottom: 2em;
 // }
 // .hide{
-//   display: none !important; 
+//   display: none !important;
 //   opacity: 0;
 //   transition: opacity 1s;
 // }

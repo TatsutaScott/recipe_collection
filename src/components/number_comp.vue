@@ -1,83 +1,58 @@
 <template>
-  <span>
-    <!-- if its a whole number -->
-    <span v-if="whole > 0">{{ whole }}</span>
-
-    <!-- if its a fraction -->
-    <span v-if="denominator > 1" class="frac">
-      <sup>{{ numerator }}</sup>
-      <span>&frasl;</span>
-      <sub>{{ denominator }}</sub>
-    </span>
-  </span>
+  <span v-if="findWhole(num)">{{ findWhole(num) }}</span>
+  <div v-if="findRemainder(num) > 1" class="frac">
+    <span>{{ findRemainder(num) }}</span>
+    <span class="symbol">/</span>
+    <span class="bottom">{{ num.denominator }}</span>
+  </div>
 </template>
 
 <script setup>
-import { defineProps, ref, defineExpose } from "vue";
+import { defineProps, ref } from "vue";
 import { Fraction } from "fractional";
 
-const props = defineProps({
-  val: Number,
-});
-defineExpose({
-  multiply,
-});
+const props = defineProps(["val"]);
 
-let num = new Fraction(props.val);
-const denominator = ref(num.denominator);
-const numerator = ref(findNumerator(num));
-const whole = ref(findWhole(num));
+const num = ref(null);
 
-// const num = new Fraction(props.val);
-// const denominator = ref(num.denominator);
-// const numerator = ref(findNumerator(num));
-// const whole = ref(findWhole(num));
-
-function findWhole(frac) {
-  return frac.numerator > frac.denominator ||
-    frac.numerator === frac.denominator
-    ? Math.floor(frac.numerator / frac.denominator)
-    : 0;
+if (typeof props.val == "number") {
+  num.value = new Fraction(props.val);
+} else if (typeof props.val == "object") {
+  num.value = new Fraction(props.val.numerator, props.val.denominator);
 }
 
-function findNumerator(frac) {
-  const thing =
-    frac.numerator > frac.denominator
-      ? frac.numerator % frac.denominator
-      : frac.numerator;
-  console.log(thing);
-  return thing;
+function findWhole(fraction) {
+  const { numerator, denominator } = fraction;
+  if (numerator > denominator || numerator == denominator) {
+    return Math.floor(numerator / denominator);
+  } else {
+    return 0;
+  }
 }
 
-function multiply(mult) {
-  num = new Fraction(props.val * mult);
-  denominator.value = num.denominator;
-  numerator.value = findNumerator(num);
-  whole.value = findWhole(num);
+function findRemainder(fraction) {
+  const { numerator, denominator } = fraction;
+  return numerator % denominator;
 }
 </script>
 
 <style lang="scss" scoped>
-@mixin subSup {
-  display: block;
-  font: inherit;
-  padding: 0 0.3em;
-  font-size: 75%;
-}
 .frac {
   display: inline-block;
-  text-align: center;
+  position: relative;
   vertical-align: middle;
-
-  sub {
-    @include subSup;
-  }
-  sup {
-    @include subSup;
-    border-bottom: 0.08em solid;
-  }
-  span {
-    display: none;
-  }
+  letter-spacing: 0.001em;
+  text-align: center;
+  width: fit-content;
+}
+.frac > span {
+  display: block;
+  padding: 0.1em;
+}
+.frac span.bottom {
+  border-top: thin solid black;
+}
+.frac span.symbol {
+  display: none;
 }
 </style>
