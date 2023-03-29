@@ -13,7 +13,10 @@
       />
     </div>
 
-    <div id="detailsContainer">
+    <div
+      id="detailsContainer"
+      :class="recipe.notes ? 'sixEighths' : 'sevenEighths'"
+    >
       <ingredientsSection
         v-if="recipe"
         id="ingredientsSection"
@@ -26,6 +29,9 @@
         :directions="recipe.directions"
       />
     </div>
+    <div id="notesContainer" v-if="recipe.notes">
+      <notesSection :notes="recipe.notes" />
+    </div>
   </div>
 </template>
 
@@ -35,6 +41,7 @@ import { defineProps, ref } from "vue";
 import titleSection from "../components/section_components/title_section.vue";
 import ingredientsSection from "../components/section_components/ingredients_section.vue";
 import directionsSection from "../components/section_components/directions_section.vue";
+import notesSection from "@/components/section_components/notes_section.vue";
 
 const props = defineProps({
   name: String,
@@ -56,14 +63,23 @@ import(`../static/${props.name}.json`).then((data) => (recipe.value = data));
 #detailsContainer {
   display: flex;
   flex-direction: row;
-  height: 87.5vh;
 }
 
 #titleContainer {
   @include container();
   height: 12.5vh;
 }
+#notesContainer {
+  @include container();
+  height: 12.5vh;
+}
+.sevenEighths {
+  height: 87.5vh;
+}
 
+.sixEighths {
+  height: 75vh;
+}
 #ingredientsSection {
   @include container();
 }
