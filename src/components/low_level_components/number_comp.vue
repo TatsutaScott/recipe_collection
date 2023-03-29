@@ -1,10 +1,12 @@
 <template>
-  <span v-if="findWhole(num)">{{ findWhole(num) }}</span>
-  <div v-if="findRemainder(num) > 1" class="frac">
-    <span>{{ findRemainder(num) }}</span>
-    <span class="symbol">/</span>
-    <span class="bottom">{{ num.denominator }}</span>
-  </div>
+  <span>
+    <span v-if="findWhole(num)">{{ findWhole(num) }}</span>
+    <div v-if="findRemainder(num) > 0" class="frac">
+      <span>{{ findRemainder(num) }}</span>
+      <span class="symbol">/</span>
+      <span class="bottom">{{ num.denominator }}</span>
+    </div>
+  </span>
 </template>
 
 <script setup>
@@ -20,7 +22,7 @@ if (typeof props.val == "number") {
 } else if (typeof props.val == "object") {
   num.value = new Fraction(props.val.numerator, props.val.denominator);
 }
-
+console.log(num.value);
 function findWhole(fraction) {
   const { numerator, denominator } = fraction;
   if (numerator > denominator || numerator == denominator) {
