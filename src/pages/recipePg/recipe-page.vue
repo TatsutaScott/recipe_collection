@@ -38,17 +38,17 @@
 <script setup>
 import { defineProps, ref } from "vue";
 
-import titleSection from "../components/section_components/title_section.vue";
-import ingredientsSection from "../components/section_components/ingredients_section.vue";
-import directionsSection from "../components/section_components/directions_section.vue";
-import notesSection from "@/components/section_components/notes_section.vue";
+import titleSection from "@/pages/recipePg/sectionComps/title_section.vue";
+import ingredientsSection from "@/pages/recipePg/sectionComps/ingredients_section.vue";
+import directionsSection from "@/pages/recipePg/sectionComps/directions_section.vue";
+import notesSection from "@/pages/recipePg/sectionComps/notes_section.vue";
 
 const props = defineProps({
   name: String,
 });
 
 const recipe = ref(null);
-import(`../static/${props.name}.json`).then((data) => (recipe.value = data));
+import(`../../static/${props.name}.json`).then((data) => (recipe.value = data));
 </script>
 
 <style lang="scss">
