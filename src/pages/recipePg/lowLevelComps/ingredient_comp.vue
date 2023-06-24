@@ -1,13 +1,13 @@
 <template>
   <div class="ingredient">
     <div v-if="Array.isArray(props.amount)">
-      <Number_comp :val="props.amount[0]" />
+      <span>{{ props.amount[0].toString() }}</span>
       <span> - </span>
-      <Number_comp :val="props.amount[1]" />
+      <span>{{ props.amount[1].toString() }}</span>
     </div>
-    <div v-else-if="!props.amount"></div>
-    <Number_comp v-else :val="props.amount" />
-
+    <div v-else>
+      <span>{{ props.amount.toString() }}</span>
+    </div>
     <span class="unit">{{ props.unit.toLowerCase() }}</span>
     <div>
       <span class="name">{{ props.name }}</span>
@@ -18,7 +18,7 @@
 
 <script setup>
 import { defineProps } from "vue";
-import Number_comp from "./number_comp.vue";
+// import Number_comp from "./number_comp.vue";
 
 const props = defineProps(["name", "unit", "amount", "note"]);
 </script>

@@ -29,7 +29,7 @@
         },
         {
           "name": "Heavy Cream",
-          "amount": { "numerator": 3, "denominator": 4 },
+          "amount": { "n": 3, "d": 4 },
           "unit": "Cup"
         },
         {

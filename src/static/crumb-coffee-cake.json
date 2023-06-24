@@ -77,8 +77,8 @@
           "name": "Butter",
           "amount": [
             {
-              "numerator": 1,
-              "denominator": 3
+              "n": 1,
+              "d": 3
             },
             0.5
           ],

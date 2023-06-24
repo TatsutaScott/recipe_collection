@@ -65,8 +65,8 @@
         {
           "name": "Low Sodium Chicken Broth",
           "amount": {
-            "numerator": 1,
-            "denominator": 3
+            "n": 1,
+            "d": 3
           },
           "unit": "Cup"
         },

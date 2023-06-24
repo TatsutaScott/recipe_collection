@@ -8,9 +8,9 @@
     </h3>
 
     <Ingredient_comp
-      v-for="ingredient in props.ingredientGroup.contents"
+      v-for="ingredient in ingredients.contents"
       :key="ingredient.name"
-      :note="ingredient.note"
+      :note="ingredient.note ? ingredient.note : null"
       :name="ingredient.name"
       :amount="ingredient.amount"
       :unit="ingredient.unit"
@@ -19,17 +19,37 @@
 </template>
 
 <script setup>
-import { defineProps, defineExpose } from "vue";
+import { defineProps, defineExpose, ref } from "vue";
 import Ingredient_comp from "@/pages/recipePg/lowLevelComps/ingredient_comp.vue";
+import Frac from "@/pages/recipePg/js/Frac.js";
 
 const props = defineProps({
   ingredientGroup: Object,
 });
 
-defineExpose({ hi });
+const ingredients = ref(JSON.parse(JSON.stringify(props.ingredientGroup)));
+ingredients.value.contents.forEach((i) => {
+  if (Array.isArray(i.amount)) {
+    i.amount = [new Frac(i.amount[0]), new Frac(i.amount[1])];
+  } else {
+    i.amount = new Frac(i.amount);
+  }
+});
 
+defineExpose({ hi, multiplySection });
 function hi() {
   console.log(`${props.ingredientGroup.title} section loaded.`);
+}
+
+function multiplySection(m) {
+  ingredients.value.contents.forEach((i) => {
+    if (Array.isArray(i.amount)) {
+      i.amount[0].mult(m);
+      i.amount[1].mult(m);
+    } else {
+      i.amount.mult(m);
+    }
+  });
 }
 </script>
 

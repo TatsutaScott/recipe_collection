@@ -2,19 +2,44 @@
   <div id="ingredients">
     <div id="ingredientHeader">
       <h2>Ingredients</h2>
-      <!-- <div id="multipliers">
-            <span @click="activeMult = 'half'; subIngredients.forEach(s => s.multiplySection(0.5));"
-                :class="[activeMult == 'half'? 'active' : 'basic', 'button']">half</span>
-            <span @click="activeMult = 'normal'; subIngredients.forEach(s => s.multiplySection(1))"
-                :class="[activeMult == 'normal' ? 'active' : 'basic', 'button']">normal</span>
-            <span @click="activeMult = 'double'; subIngredients.forEach(s => s.multiplySection(2))"
-                :class="[activeMult == 'double' ? 'active' : 'basic', 'button']">double</span>
-            <div id="custom" :class="[activeMult == 'custom' ? 'active' : 'basic', 'button']">
-                <span @click="activeMult = 'custom';">custom </span>
-                <number v-if="activeMult == 'custom'" :value="1" :step="0.25"
-                    @input="(n) => subIngredients.forEach(s => s.multiplySection(n))" />
-            </div>
-        </div> -->
+      <div id="multipliers">
+        <span
+          @click="
+            activeMult = 'half';
+            subIngredients.forEach((s) => s.multiplySection(0.5));
+          "
+          :class="[activeMult == 'half' ? 'active' : 'basic', 'button']"
+          >half</span
+        >
+        <span
+          @click="
+            activeMult = 'normal';
+            subIngredients.forEach((s) => s.multiplySection(1));
+          "
+          :class="[activeMult == 'normal' ? 'active' : 'basic', 'button']"
+          >normal</span
+        >
+        <span
+          @click="
+            activeMult = 'double';
+            subIngredients.forEach((s) => s.multiplySection(2));
+          "
+          :class="[activeMult == 'double' ? 'active' : 'basic', 'button']"
+          >double</span
+        >
+        <div
+          id="custom"
+          :class="[activeMult == 'custom' ? 'active' : 'basic', 'button']"
+        >
+          <span @click="activeMult = 'custom'">custom </span>
+          <number
+            v-if="activeMult == 'custom'"
+            :value="1"
+            :step="0.25"
+            @input="(n) => subIngredients.forEach((s) => s.multiplySection(n))"
+          />
+        </div>
+      </div>
       <!-- <button class="menuToggle" @click="toggleIngredients">{{ hideIngredients? '▼':'▲'}}</button> -->
     </div>
     <div id="ingredientList" :class="hideIngredients ? 'hide' : ''">
@@ -31,20 +56,21 @@
 <script setup>
 import { defineProps, onMounted, ref } from "vue";
 import subsection from "@/pages/recipePg/sectionComps/ingredient_subSection.vue";
-// import number from './number_input.vue'
 
 const props = defineProps({
   ingredients: Array,
 });
+
 const subIngredients = ref();
 
 onMounted(() => {
   subIngredients.value.forEach((i) => {
     i.hi();
+    i.multiplySection(1);
   });
 });
 
-// const activeMult = ref("normal");
+const activeMult = ref("normal");
 
 const hideIngredients = ref(false);
 // function toggleIngredients(){
@@ -54,6 +80,7 @@ const hideIngredients = ref(false);
 
 <style lang="scss">
 @import "@/assets/styles/globalStyles.scss";
+
 #ingredients {
   @include container;
   @include basic;

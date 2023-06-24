@@ -43,8 +43,8 @@
         {
           "name": "Pecorino",
           "amount": {
-            "numerator": 2,
-            "denominator": 3
+            "n": 2,
+            "d": 3
           },
           "note": "finely grated",
           "unit": "Cups"
