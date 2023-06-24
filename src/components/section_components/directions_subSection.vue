@@ -31,6 +31,10 @@ const props = defineProps({
     text-align: right;
   }
 }
+.step:hover {
+  background-color: rgba(179, 179, 179, 0.424);
+  border-radius: 5px;
+}
 li {
   margin: 0.5em 0;
 }

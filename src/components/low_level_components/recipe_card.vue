@@ -21,12 +21,14 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .recipeCardContainer {
-  margin: 0.5rem 1rem 0.5rem 0;
-  padding: 0.5rem;
+  width: 250px;
+  height: 100px;
+  margin: 0.5rem 1rem 1rem 0;
+  padding: 1rem;
   border: 1px solid black;
   border-radius: 20px;
-
   background-color: white;
+  transition: all 0.5s;
 }
 .recipeCardContainer:hover {
   background-color: lightgray;
@@ -41,6 +43,7 @@ const props = defineProps({
   padding: 0.25rem;
   border: 1px solid black;
   border-radius: 10px;
+  background-color: white;
 }
 .tagContainer {
   margin: 0.5rem 0;

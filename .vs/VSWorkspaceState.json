@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\low_level_components",
+    "\\src\\components\\section_components",
+    "\\src\\pages"
+  ],
+  "SelectedNode": "\\src\\components\\section_components\\ingredients_section.vue",
+  "PreviewInSolutionExplorer": false
+}

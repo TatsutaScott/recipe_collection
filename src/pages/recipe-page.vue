@@ -67,6 +67,7 @@ import(`../static/${props.name}.json`).then((data) => (recipe.value = data));
 
 #titleContainer {
   @include container();
+  @include flex(row, space-between, center);
   height: 12.5vh;
 }
 #notesContainer {

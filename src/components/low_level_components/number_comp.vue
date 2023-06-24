@@ -22,7 +22,7 @@ if (typeof props.val == "number") {
 } else if (typeof props.val == "object") {
   num.value = new Fraction(props.val.numerator, props.val.denominator);
 }
-console.log(num.value);
+
 function findWhole(fraction) {
   const { numerator, denominator } = fraction;
   if (numerator > denominator || numerator == denominator) {
