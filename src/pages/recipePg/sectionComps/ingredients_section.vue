@@ -8,7 +8,7 @@
             activeMult = 'half';
             subIngredients.forEach((s) => s.multiplySection(0.5));
           "
-          :class="[activeMult == 'half' ? 'active' : 'basic', 'button']"
+          :class="[activeMult == 'half' ? 'active' : 'inactive', 'multButton']"
           >half</span
         >
         <span
@@ -16,7 +16,10 @@
             activeMult = 'normal';
             subIngredients.forEach((s) => s.multiplySection(1));
           "
-          :class="[activeMult == 'normal' ? 'active' : 'basic', 'button']"
+          :class="[
+            activeMult == 'normal' ? 'active' : 'inactive',
+            'multButton',
+          ]"
           >normal</span
         >
         <span
@@ -24,12 +27,18 @@
             activeMult = 'double';
             subIngredients.forEach((s) => s.multiplySection(2));
           "
-          :class="[activeMult == 'double' ? 'active' : 'basic', 'button']"
+          :class="[
+            activeMult == 'double' ? 'active' : 'inactive',
+            'multButton',
+          ]"
           >double</span
         >
         <div
           id="custom"
-          :class="[activeMult == 'custom' ? 'active' : 'basic', 'button']"
+          :class="[
+            activeMult == 'custom' ? 'active' : 'inactive',
+            'multButton',
+          ]"
         >
           <span @click="activeMult = 'custom'">custom </span>
           <number
@@ -96,36 +105,55 @@ const hideIngredients = ref(false);
 #ingredientList {
   width: 100%;
 }
-// #multipliers {
-//   @include flex(row, flex-end, center);
-//   span {
-//     margin-left: 0.25em;
-//   }
+#multipliers {
+  @include flex(row, flex-end, center);
+  span {
+    margin-left: 0.25em;
+  }
+}
+
+// .menuToggle {
+//     border: none;
+//     color: $color-weak;
+//     background: none;
 // }
-// // .menuToggle {
-// //     border: none;
-// //     color: $color-weak;
-// //     background: none;
-// // }
-// // #ingredients{
-// //     margin: 2em 0;
-// // }
-// //
-// // #ingredientHeader>h2{
-// //     margin: 0.25em 0;
-// // }
-// // #multipliers{
-// //     margin: auto 0;
-// //     display: flex;
-// //     align-items: center;
-// // }
-// // #multipliers>span{
-// //     margin-left: 0.25em;
-// // }
-// // #ingredientList{
-// //     display: grid;
-// //     grid-template-columns: 1fr 1fr;
-// // }
+// #ingredients{
+//     margin: 2em 0;
+// }
+//
+// #ingredientHeader>h2{
+//     margin: 0.25em 0;
+// }
+#multipliers {
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+}
+
+.multButton {
+  width: 75px;
+  cursor: pointer;
+  background-color: white;
+  margin-left: 0.3em;
+  text-align: center;
+}
+
+.active {
+  // border: 1px solid $color-weak;
+  border-radius: 0.75rem;
+  background-color: $color-weak;
+  color: $color-white;
+  transition: background-color 1s 0.025s;
+}
+.basic {
+  color: $color-weak;
+  background-color: $color-white;
+  padding: 0.125em 0.5em;
+}
+// #ingredientList{
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+// }
 
 // #custom {
 //   position: relative;
@@ -144,23 +172,4 @@ const hideIngredients = ref(false);
 // //     font-size: 1em;
 // //     margin-left: 1em;
 // // }
-
-// .active {
-//   padding: 0.0525em 0.35em;
-//   border: 1px solid $color-weak;
-//   border-radius: 0.75rem;
-//   background-color: $color-weak;
-//   color: $color-white;
-//   transition: background-color 0.25s ease-out 50ms;
-//   transition: border 0.25s ease-out 50ms;
-// }
-
-// .basic {
-//   color: $color-weak;
-//   padding: 0.125em 0.5em;
-// }
-
-// .button {
-//   cursor: pointer;
-// }
 </style>

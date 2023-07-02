@@ -37,6 +37,7 @@ ingredients.value.contents.forEach((i) => {
 });
 
 defineExpose({ hi, multiplySection });
+multiplySection(1);
 function hi() {
   console.log(`${props.ingredientGroup.title} section loaded.`);
 }
