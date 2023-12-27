@@ -22,14 +22,20 @@
       "id": 2
     },
     {
-      "title": "拍黃瓜 Smashed Cucumber Salad",
+      "title": {
+        "english": "Smashed Cucumber Salad",
+        "foreign": "拍黃瓜"
+      },
       "slug": "smashed-cucumber",
       "date": [27, 3, 2023],
       "tags": ["Side", "Chinese", "Salad"],
       "id": 3
     },
     {
-      "title": "麻婆豆腐 Mapo Tofu",
+      "title": {
+        "english": "Mapo Tofu",
+        "foreign": "麻婆豆腐"
+      },
       "slug": "mapo-tofu",
       "date": [27, 3, 2023],
       "tags": ["Main", "Chinese"],
@@ -120,63 +126,90 @@
       "id": 16
     },
     {
-      "title": "Spinach Goma ae",
+      "title": {
+        "english": "Spinach Goma ae",
+        "foreign": "ほうれん草の胡麻和え"
+      },
       "slug": "goma-ae",
       "date": [26, 12, 2023],
       "tags": ["Japanese", "Side", "Vegetable"],
       "id": 17
     },
     {
-      "title": "Gyudon",
+      "title": {
+        "english": "Gyudon",
+        "foreign": "牛丼"
+      },
       "slug": "gyudon",
       "date": [26, 12, 2023],
       "tags": ["Main", "Donburi", "Japanese"],
       "id": 18
     },
     {
-      "title": "Kakuni",
+      "title": {
+        "english": "Kakuni",
+        "foreign": "角煮"
+      },
       "slug": "kakuni",
       "date": [26, 12, 2023],
       "tags": ["Japanese", "Side", "Pork"],
       "id": 19
     },
     {
-      "title": "Karaage",
+      "title": {
+        "english": "Karaage",
+        "foreign": "唐揚げ"
+      },
       "slug": "karaage",
       "date": [26, 12, 2023],
       "tags": ["Japanese", "Chicken"],
       "id": 20
     },
     {
-      "title": "Keema Curry",
+      "title": {
+        "english": "Keema Curry",
+        "foreign": "キーマカレー"
+      },
       "slug": "keema-curry",
       "date": [26, 12, 2023],
       "tags": ["Curry", "Main", "Japanese"],
       "id": 21
     },
     {
-      "title": "Oyakodon",
+      "title": {
+        "english": "Oyakodon",
+        "foreign": "親子丼"
+      },
       "slug": "oyakodon",
       "date": [26, 12, 2023],
       "tags": ["Japanese", "Donburi", "Main", " Chicken"],
       "id": 22
     },
     {
-      "title": "Tonjiru",
+      "title": {
+        "english": "Tonjiru",
+        "foreign": "豚汁"
+      },
       "slug": "tonjiru",
       "date": [26, 12, 2023],
       "tags": ["Japanese", "Soup", "Pork"],
       "id": 23
     },
     {
-      "title": "Tonteki",
+      "title": {
+        "english": "Tonteki",
+        "foreign": "トンテキ"
+      },
       "slug": "tonteki",
       "date": [26, 12, 2023],
       "tags": ["Japanese", "Main", "Pork"],
       "id": 24
     },
     {
-      "title": "Naeungmyeon",
+      "title": {
+        "english": "Mul-naengmyeon",
+        "foreign": "물냉면"
+      },
       "slug": "naeungmyeon",
       "date": [26, 12, 2023],
       "tags": ["Korean", "Noodle", "Main"],

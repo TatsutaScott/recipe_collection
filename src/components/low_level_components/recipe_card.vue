@@ -1,6 +1,8 @@
 <template>
   <router-link :to="`/recipe/${props.slug}`" class="recipeCardContainer plain">
-    <h3 class="cardTitle">{{ props.title }}</h3>
+    <h3 v-if="typeof props.title == 'string'" class="cardTitle">
+      {{ props.title }}
+    </h3>
     <div class="tagContainer">
       <span class="cardTag" v-for="tag in props.tags" :key="tag">{{
         tag
