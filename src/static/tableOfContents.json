@@ -118,6 +118,62 @@
       "date": [16, 6, 2023],
       "tags": ["Main", "Italian", "Pasta"],
       "id": 16
+    },
+    {
+      "title": "Spinach Goma ae",
+      "slug": "goma-ae",
+      "date": [26, 12, 2023],
+      "tags": ["Japanese", "Side", "Vegetable"],
+      "id": 17
+    },
+    {
+      "title": "Gyudon",
+      "slug": "gyudon",
+      "date": [26, 12, 2023],
+      "tags": ["Main", "Donburi", "Japanese"],
+      "id": 18
+    },
+    {
+      "title": "Kakuni",
+      "slug": "kakuni",
+      "date": [26, 12, 2023],
+      "tags": ["Japanese", "Side", "Pork"],
+      "id": 19
+    },
+    {
+      "title": "Karaage",
+      "slug": "karaage",
+      "date": [26, 12, 2023],
+      "tags": ["Japanese", "Chicken"],
+      "id": 20
+    },
+    {
+      "title": "Keema Curry",
+      "slug": "keema-curry",
+      "date": [26, 12, 2023],
+      "tags": ["Curry", "Main", "Japanese"],
+      "id": 21
+    },
+    {
+      "title": "Oyakodon",
+      "slug": "oyakodon",
+      "date": [26, 12, 2023],
+      "tags": ["Japanese", "Donburi", "Main", " Chicken"],
+      "id": 22
+    },
+    {
+      "title": "Tonjiru",
+      "slug": "tonjiru",
+      "date": [26, 12, 2023],
+      "tags": ["Japanese", "Soup", "Pork"],
+      "id": 23
+    },
+    {
+      "title": "Tonteki",
+      "slug": "tonteki",
+      "date": [26, 12, 2023],
+      "tags": ["Japanese", "Main", "Pork"],
+      "id": 24
     }
   ]
 }
