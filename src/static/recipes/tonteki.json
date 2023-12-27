@@ -1,74 +1,66 @@
 {
-  "title": "Test Recipe",
-  "source": "https://www.youtube.com/",
+  "title": "トンテキ Tonteki",
+  "source": "https://www.justonecookbook.com/tonteki/",
   "time": {
-    "amount": 12,
+    "amount": 25,
     "unit": "minutes"
   },
   "servings": {
-    "amount": 12,
-    "unit": "Tests"
+    "amount": 4,
+    "unit": "servings"
   },
-  "date": [1, 1, 1912],
-  "tags": ["test", "not", "a", " recipe"],
+  "date": [26, 12, 2023],
+  "tags": ["Japanese", "Main", "Pork"],
   "ingredients": [
     {
-      "title": "Section 1",
+      "title": null,
       "notes": null,
       "contents": [
         {
-          "name": "Ingredient 1",
+          "name": "Onion",
+          "amount": { "n": 1, "d": 2 },
+          "unit": null
+        },
+        {
+          "name": "Boneless Pork Chops",
+          "amount": 4,
+          "unit": null,
+          "note": "approx. 1 lb"
+        },
+        {
+          "name": "salt",
+          "amount": { "n": 1, "d": 4 },
+          "unit": "teaspoon"
+        },
+        {
+          "name": "Pepper",
+          "amount": { "n": 1, "d": 4 },
+          "unit": "teaspoon"
+        },
+        {
+          "name": "Flour",
+          "amount": 2,
+          "unit": "tablespoon"
+        },
+        {
+          "name": "Neautral Flavored Oil",
+          "amount": 2,
+          "unit": "tablespoon"
+        },
+        {
+          "name": "Ponzu",
+          "amount": 6,
+          "unit": "tablespoon"
+        },
+        {
+          "name": "Sake",
+          "amount": 6,
+          "unit": "tablespoon"
+        },
+        {
+          "name": "Soy Sauce",
           "amount": 1,
-          "unit": "Cup",
-          "note": "whole number"
-        },
-        {
-          "name": "Ingredient 2",
-          "amount": [1, 4],
-          "unit": "cup",
-          "note": "range of numbers"
-        },
-        {
-          "name": "Ingredient 3",
-          "amount": 12.5,
-          "unit": "teaspoon",
-          "note": "decimal"
-        },
-        {
-          "name": "Ingredient 4",
-          "amount": { "n": 2, "d": 3 },
-          "unit": "Cup",
-          "note": "fraction"
-        }
-      ]
-    },
-    {
-      "title": "Section 2",
-      "notes": "optional",
-      "contents": [
-        {
-          "name": "Ingredient 1",
-          "amount": 1,
-          "unit": "Cup",
-          "note": "whole number"
-        },
-        {
-          "name": "Ingredient 2",
-          "amount": [1, 4],
-          "unit": "cup",
-          "note": "range of numbers"
-        },
-        {
-          "name": "Ingredient 3",
-          "amount": 12.5,
-          "unit": "teaspoon",
-          "note": "decimal"
-        },
-        {
-          "name": "Ingredient 4",
-          "amount": { "n": 2, "d": 3 },
-          "unit": "Cup",
-          "note": "fraction"
+          "unit": "tablespoon"
         }
       ]
     }
@@ -77,24 +69,33 @@
     {
       "title": "Section 1",
       "steps": [
-        "This is a normal step, just a string.",
+        "Gather all the ingredients.",
+        "Over a small bowl, grate onion (use about half of it) and set aside.",
+        "Shred the cabbage into thin slices and cut the tomato into wedges.",
+        "In a medium bowl, combine ponzu, sake, soy sauce and whisk all together.",
+        "In order to sear the meat perfectly, pat dry the pork chops with paper towels. Removing the moisture will prevent the meat from being steamed.",
         {
-          "step": "This is not a normal step, it is an object.",
-          "note": "This is the step's note."
-        }
-      ]
-    },
-    {
-      "title": "Section 2",
-      "steps": [
-        "This is a normal step, just a string. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae aliquet urna. Nullam condimentum dictum dapibus. Vivamus nec aliquam quam."
+          "step": "Make a couple of slits on the connective tissue between meat and fat on both sides of the meat.",
+          "note": "Red meat and fat have different elasticity, and when they are cooked, they will shrink and expand at different rates. These slits allow the pork loin chops to stay nice and flat when being cooked and prevent it from curling up."
+        },
+        {
+          "step": "Season one side of the meat with kosher salt and freshly ground black pepper.",
+          "note": "the sauce is salty, so you can skip the salt here if you like"
+        },
+        "Coat the meat with flour and remove excess flour.",
+        {
+          "step": "Heat the frying pan over medium-high heat and add the oil. When the pan is hot, add the pork loin chops and cook for 4 minutes each side. Do not flip until the bottom is nice golden brown. If you cook more than 2 pieces, make sure to cook in batches. Give some space between meat, which ensures nice searing and prevent from steaming the meat. ",
+          "note": "Browning the meat gives an important flavor component. To get evenly golden brown, the meat should be flat, which is why making slits is important at step 6."
+        },
+        {
+          "step": "If you see the protein coming out from the meat, you can pick it up and wipe off the excess oil.",
+          "note": "optional"
+        },
+        "Add the sauce and grated onion to the pan.",
+        "Pour the sauce over the meat and coat well with a spoon",
+        "If you eat with chopsticks, transfer to the cutting board and slice into bite-size pieces. Serve the Tonteki with shredded cabbage and tomatoes. Pour the extra sauce over the cabbage if you like."
       ]
     }
   ],
-  "notes": [
-    {
-      "title": "Crumble Adjustments",
-      "content": "when I make it I usually add at least 1 tablespoon of cinnamon and a large pinch of salt to the crumble part."
-    }
-  ]
+  "notes": null
 }
