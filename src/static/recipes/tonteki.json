@@ -1,5 +1,8 @@
 {
-  "title": "トンテキ Tonteki",
+  "title": {
+    "english": "Tonteki",
+    "foreign": "トンテキ"
+  },
   "source": "https://www.justonecookbook.com/tonteki/",
   "time": {
     "amount": 25,

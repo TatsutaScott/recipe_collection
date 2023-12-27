@@ -1,5 +1,8 @@
 {
-  "title": "돼지불고기 Pork Bulgogi",
+  "title": {
+    "english": "Pork Bulgogi",
+    "foreign": "돼지불고기"
+  },
   "source": "https://www.maangchi.com/recipe/bulgogi",
   "time": {
     "amount": 40,

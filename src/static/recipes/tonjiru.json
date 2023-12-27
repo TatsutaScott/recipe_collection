@@ -1,5 +1,8 @@
 {
-  "title": "豚汁 Tonjiru",
+  "title": {
+    "english": "Tonjiru",
+    "foreign": "豚汁"
+  },
   "source": "https://www.justonecookbook.com/tonjiru/",
   "time": {
     "amount": 40,

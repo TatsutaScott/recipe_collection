@@ -1,5 +1,8 @@
 {
-  "title": "親子丼 Oyakodon",
+  "title": {
+    "english": "Oyakodon",
+    "foreign": "親子丼"
+  },
   "source": "https://www.justonecookbook.com/oyakodon/",
   "time": {
     "amount": 30,

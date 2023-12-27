@@ -1,5 +1,8 @@
 {
-  "title": "麻婆豆腐 Mapo Tofu",
+  "title": {
+    "english": "Mapo Tofu",
+    "foreign": "麻婆豆腐"
+  },
   "source": "https://thewoksoflife.com/ma-po-tofu-real-deal/",
   "time": {
     "amount": 35,

@@ -8,7 +8,7 @@
     <div v-else>
       <span>{{ props.amount.toString() }}</span>
     </div>
-    <span class="unit">{{ props.unit.toLowerCase() }}</span>
+    <span class="unit">{{ props.unit ? props.unit.toLowerCase() : "" }}</span>
     <div>
       <span class="name">{{ props.name }}</span>
       <span class="note" v-if="props.note">{{ props.note }}</span>

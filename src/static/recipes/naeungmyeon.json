@@ -1,5 +1,8 @@
 {
-  "title": "물냉면 Mul-naengmyeon",
+  "title": {
+    "english": "Mul-naengmyeon",
+    "foreign": "물냉면"
+  },
   "source": "https://www.maangchi.com/recipe/naengmyeon",
   "time": {
     "amount": 4,

@@ -1,5 +1,8 @@
 {
-  "title": "ほうれん草の胡麻和え Spinach Goma ae",
+  "title": {
+    "english": "Spinach Goma ae",
+    "foreign": "ほうれん草の胡麻和え"
+  },
   "source": "https://www.justonecookbook.com/spinach-with-sesame-sauce/",
   "time": {
     "amount": 15,

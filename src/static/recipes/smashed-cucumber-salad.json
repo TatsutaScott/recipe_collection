@@ -1,5 +1,8 @@
 {
-  "title": "拍黃瓜 Smashed Cucumber Salad",
+  "title": {
+    "english": "Smashed Cucumber Salad",
+    "foreign": "拍黃瓜"
+  },
   "source": "https://thewoksoflife.com/smashed-asian-cucumber-salad/",
   "time": {
     "amount": 10,

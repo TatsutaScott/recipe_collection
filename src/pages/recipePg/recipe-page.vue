@@ -48,7 +48,9 @@ const props = defineProps({
 });
 
 const recipe = ref(null);
-import(`../../static/${props.name}.json`).then((data) => (recipe.value = data));
+import(`../../static/recipes/${props.name}.json`).then(
+  (data) => (recipe.value = data)
+);
 </script>
 
 <style lang="scss">

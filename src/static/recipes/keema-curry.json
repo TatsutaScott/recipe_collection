@@ -1,5 +1,8 @@
 {
-  "title": "キーマカレー Keema Curry",
+  "title": {
+    "english": "Keema Curry",
+    "foreign": "キーマカレー"
+  },
   "source": "https://www.justonecookbook.com/keema-curry/",
   "time": {
     "amount": 30,
@@ -9,7 +12,7 @@
     "amount": 4,
     "unit": "servings"
   },
-  "date": [26,12,2023],
+  "date": [26, 12, 2023],
   "tags": ["Curry", "Main", "Japanese"],
   "ingredients": [
     {
@@ -28,7 +31,7 @@
         },
         {
           "name": "Carrot",
-          "amount": {"n": 1, "d": 2},
+          "amount": { "n": 1, "d": 2 },
           "unit": null
         },
         {
@@ -48,7 +51,7 @@
         },
         {
           "name": "Salt",
-          "amount": {"n": 1, "d": 4},
+          "amount": { "n": 1, "d": 4 },
           "unit": "teaspoon"
         },
         {
@@ -58,7 +61,7 @@
         },
         {
           "name": "Water",
-          "amount": {"n": 1, "d": 2},
+          "amount": { "n": 1, "d": 2 },
           "unit": "cup"
         },
         {
@@ -93,12 +96,12 @@
     {
       "title": null,
       "steps": [
-        "Gather all the ingredients.", 
-        "Chop the onion finely. With the knife tip pointing toward the root, slice the onion to within ½ inch of the base. Make about ¼ inch parallel cuts. Then slice the onion horizontally about ¼ inch parallel cuts.", 
+        "Gather all the ingredients.",
+        "Chop the onion finely. With the knife tip pointing toward the root, slice the onion to within ½ inch of the base. Make about ¼ inch parallel cuts. Then slice the onion horizontally about ¼ inch parallel cuts.",
         {
-            "step":"Then cut perpendicular to the first slices you made. If the onions need to be chopped finer, you can run your knife through them in a rocking motion.", 
-            "note":"Be sure to hold down the tip of the knife; otherwise, the onions are going to go flying around."
-        }, 
+          "step": "Then cut perpendicular to the first slices you made. If the onions need to be chopped finer, you can run your knife through them in a rocking motion.",
+          "note": "Be sure to hold down the tip of the knife; otherwise, the onions are going to go flying around."
+        },
         "Cut the celery into 4-inch pieces, then thin sticks, and mince them.",
         "Cut the carrot into 4-inch thin slabs, then thin sticks, and mince them.",
         "Remove the stem of shiitake mushrooms and slice them, and mince them.",
@@ -107,17 +110,17 @@
         "Season with salt and pepper",
         "Add celery, carrots, and shiitake mushrooms and mix well with the rest of the ingredients.",
         {
-            "step":"Add chicken stock and water.",
-            "note":"Add more water, if necessary, so the cooking liquid covers the ingredients."
+          "step": "Add chicken stock and water.",
+          "note": "Add more water, if necessary, so the cooking liquid covers the ingredients."
         },
         {
-            "step":"Add curry powder and mix well. Cover and bring it to boil. Reduce heat to medium-low heat and cook covered until the vegetables are tender, about 6-8 minutes",
-            "note":"Skim off the scum and foam on the surface with a fine-mesh skimmer as necessary."
+          "step": "Add curry powder and mix well. Cover and bring it to boil. Reduce heat to medium-low heat and cook covered until the vegetables are tender, about 6-8 minutes",
+          "note": "Skim off the scum and foam on the surface with a fine-mesh skimmer as necessary."
         },
-        "Add curry roux (one piece at a time!) and butter and let them dissolved completely. The curry will thicken as it's heated up. Adjust the thickness of the curry with water/broth. You can make it soupy if you prefer.", 
+        "Add curry roux (one piece at a time!) and butter and let them dissolved completely. The curry will thicken as it's heated up. Adjust the thickness of the curry with water/broth. You can make it soupy if you prefer.",
         {
-            "step":"Add ketchup and Tonkatsu sauce. Mix well and simmer for 3-5 minutes.",
-            "note":"If the sauce is too thick, add a small amount of water to adjust."
+          "step": "Add ketchup and Tonkatsu sauce. Mix well and simmer for 3-5 minutes.",
+          "note": "If the sauce is too thick, add a small amount of water to adjust."
         },
         "Serve the Keema Curry over steamed rice and top with a fried egg, if you like."
       ]

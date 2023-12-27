@@ -1,5 +1,8 @@
 {
-  "title": "唐揚げ Karaage",
+  "title": {
+    "english": "Karaage",
+    "foreign": "唐揚げ"
+  },
   "source": "https://www.justonecookbook.com/karaage/",
   "time": {
     "amount": 1,
