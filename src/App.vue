@@ -1,54 +1,62 @@
 <template>
-  <div id="content">
+  <div id="main">
     <navSection id="nav" />
-    <RouterView></RouterView>
+    <RouterView id="content" :class="{ mobile: isMobile }"></RouterView>
   </div>
 </template>
 
 <script setup>
 import navSection from "./components/section_components/nav_section.vue";
+import { ref } from "vue";
+
+const width_cutoff = 500;
+const isMobile = ref(window.innerWidth < width_cutoff);
 </script>
 
 <style lang="scss">
 @import "./assets/styles/globalStyles.scss";
 
-#content {
-  width: 100vw;
-  height: 100vh;
+#nav {
+  @include container;
+
+  top: 0px;
+  box-sizing: border-box;
+}
+
+#main {
   margin: 0;
   padding: 0;
 
-  display: grid;
-  grid-template-columns: 1fr 6fr;
-  // overflow: hidden;
+  display: flex;
 }
 
-body {
-  // overflow: hidden;
-  margin: 0;
-  font-family: $base-font;
+@include mobile {
+  #nav {
+    @include flex(row, flex-end, center);
+
+    position: static;
+    height: 150px;
+    width: 100vw;
+  }
+  #main {
+    @include flex(column, flex-start, flex-start);
+  }
 }
-// body {
-//   font-family: Helvetica;
-//   background-color: white;
-//   color: black;
-//   margin: 0;
-// }
-// // body::-webkit-scrollbar{
-// //   width: 4em;
-// // }
-// #main{
-//   padding:2em 4em;
-//   max-width:800px;
-//   margin: 0 auto;
-//   background-color: $color-white;
-//   filter: drop-shadow(0 0 0.5rem lightgrey);
-//   border-radius:0 0 15px 15px ;
-//   margin-bottom: 2em;
-// }
-// .hide{
-//   display: none !important;
-//   opacity: 0;
-//   transition: opacity 1s;
-// }
+
+@include desktop {
+  #nav {
+    @include flex(column, flex-end, center);
+
+    position: sticky;
+    height: 100vh;
+    width: 150px;
+  }
+  #main {
+    @include flex(row, flex-start, flex-start);
+  }
+}
+
+#content {
+  width: 100%;
+}
 </style>

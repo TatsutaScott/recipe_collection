@@ -1,14 +1,22 @@
 <template>
-  <div id="index">
-    <h1>index</h1>
-    <div id="cardGallery">
-      <recipeCard
-        v-for="recipe in data.recipes"
-        :key="recipe.id"
-        :title="recipe.title"
-        :tags="recipe.tags"
-        :slug="recipe.slug"
-      />
+  <div>
+    <div id="index-container">
+      <div id="index-header">
+        <h1>Recipe Index</h1>
+        <p>
+          ** In the future this section will include controls to sort and search
+          through recipes **
+        </p>
+      </div>
+      <div id="card-gallery">
+        <recipeCard
+          v-for="recipe in data.recipes"
+          :key="recipe.id"
+          :title="recipe.title"
+          :tags="recipe.tags"
+          :slug="recipe.slug"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -19,12 +27,14 @@ import recipeCard from "@/components/low_level_components/recipe_card.vue";
 </script>
 
 <style lang="scss">
-#index {
-  padding: 2rem;
+#index-container {
+  padding-left: 2rem;
 }
-#cardGallery {
-  display: grid;
+
+#card-gallery {
+  display: flex;
   margin-top: 1rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 </style>

@@ -1,97 +1,113 @@
 //imports
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0");
-//color palette 
-$color-primary: #7EA16B;
+//color palette
+$color-primary: #7ea16b;
 $color-highlight: blue;
 $color-weak: #66716b;
-$color-text: #252A14;
+$color-text: #252a14;
 $color-white: #ffffff;
 
 //media query break points
+@mixin mobile {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
 $phone: 480px;
 $tablet: 481px;
 $laptop: 769px;
 
 //other variables
 $base-font-size: 1.25rem;
-$base-font: 'Helvetica'; //'Migra';
+$base-font: "Helvetica"; //'Migra';
 
-//util classes
-.note {
-    color: $color-weak;
-    font-style: italic;
-    margin-left: 0.5em;
-    font-size: 75% !important;
+body {
+  margin: 0;
 }
 
-.plain{
-    color: black;
-    text-decoration: none;
+// //util classes
+// .note {
+//   color: $color-weak;
+//   font-style: italic;
+//   margin-left: 0.5em;
+//   font-size: 75% !important;
+// }
+
+.plain {
+  color: black;
+  text-decoration: none;
 }
 
-.link:hover{
-    color: $color-highlight;
+.link:hover {
+  color: $color-highlight;
 }
 
-.chip{
-    font-size: 0.75rem;
-    padding: 0.125rem 0.5rem;
-    margin-right: 0.5rem;
-    border: 1px solid $color-weak;
-    border-radius: 5px;
-    background-color: $color-weak;
-    color: white;
-    transition: background-color 0.25s ease-out 50ms;
-}
-.chip:hover {
-    background-color: black;
-    border: 1px solid black;
-}
+// .chip {
+//   font-size: 0.75rem;
+//   padding: 0.125rem 0.5rem;
+//   margin-right: 0.5rem;
+//   border: 1px solid $color-weak;
+//   border-radius: 5px;
+//   background-color: $color-weak;
+//   color: white;
+//   transition: background-color 0.25s ease-out 50ms;
+// }
+// .chip:hover {
+//   background-color: black;
+//   border: 1px solid black;
+// }
 
 //utilities
 @mixin flex($direction: row, $spacing: flex-start, $align: center) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $spacing;
-    align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $spacing;
+  align-items: $align;
 }
 
 @mixin container {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 1.5em;
-    border: 0.5px solid $color-weak;
-    background-color: $color-white;
-    overflow-y: auto;
+  box-sizing: border-box;
+  // width: 100%;
+  padding: 1.5em;
+  border: 0.5px solid $color-weak;
+  //   background-color: $color-white;
+  overflow-y: auto;
 }
 
 @mixin scroll {
-    overflow-y: auto;
-    overflow-x: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 @mixin basic {
-    font-size: $base-font-size;
+  font-size: $base-font-size;
 }
 
-//configuring things 
+//configuring things
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 5px;
 }
 
-::-webkit-scrollbar-track {}
+::-webkit-scrollbar-track {
+}
 
 ::-webkit-scrollbar-thumb {
-    background: $color-weak;
-    border-radius: 10px;
+  background: $color-weak;
+  border-radius: 5px;
 }
 
 @font-face {
-    font-family: 'Migra';
-    src: url('C:/Users/tatsu/code/vue/recipe/src/assets/fonts/PPMigra-Extrabold.otf');
+  font-family: "Migra";
+  src: url("C:/Users/tatsu/code/vue/recipe/src/assets/fonts/PPMigra-Extrabold.otf");
 }
 
 @font-face {
-    font-family: 'Montreal';
-    src: url('C:/Users/tatsu/code/vue/recipe/src/assets/fonts/PPNeueMontreal-Medium.otf');
+  font-family: "Montreal";
+  src: url("C:/Users/tatsu/code/vue/recipe/src/assets/fonts/PPNeueMontreal-Medium.otf");
 }
