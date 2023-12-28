@@ -245,6 +245,13 @@
       "date": [27, 12, 2023],
       "tags": ["Middle-Eastern", "Main", "Vegetarian"],
       "id": 29
+    },
+    {
+      "title": "Garlic Shrimp",
+      "slug": "garlic-shrimp",
+      "date": [23, 12, 2023],
+      "tags": ["Hawaiian", "Shrimp", "Main"],
+      "id": 30
     }
   ]
 }
