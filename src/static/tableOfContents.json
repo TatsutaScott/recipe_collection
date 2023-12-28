@@ -231,6 +231,13 @@
       "date": [27, 12, 2023],
       "tags": ["Middle-eastern", "Main", "Vegetarian"],
       "id": 27
+    },
+    {
+      "title": "Hummus",
+      "slug": "hummus",
+      "date": [27, 12, 2023],
+      "tags": ["Middle-eastern", "Side", "Vegetarian"],
+      "id": 28
     }
   ]
 }
