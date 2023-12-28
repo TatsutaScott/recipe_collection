@@ -216,11 +216,21 @@
       "id": 25
     },
     {
-      "title": "Pork Bulgogi",
+      "title": {
+        "english": "Pork Bulgogi",
+        "foreign": "돼지불고기"
+      },
       "slug": "pork-bulgogi",
       "date": [26, 12, 2023],
       "tags": ["Korean", "Pork", "Main"],
       "id": 26
+    },
+    {
+      "title": "Falafel",
+      "slug": "falafel",
+      "date": [27, 12, 2023],
+      "tags": ["Middle-eastern", "Main", "Vegetarian"],
+      "id": 27
     }
   ]
 }
