@@ -238,6 +238,13 @@
       "date": [27, 12, 2023],
       "tags": ["Middle-eastern", "Side", "Vegetarian"],
       "id": 28
+    },
+    {
+      "title": "Shakshuka",
+      "slug": "shakshuka",
+      "date": [27, 12, 2023],
+      "tags": ["Middle-Eastern", "Main", "Vegetarian"],
+      "id": 29
     }
   ]
 }
