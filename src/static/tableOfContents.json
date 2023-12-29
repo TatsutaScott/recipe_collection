@@ -269,6 +269,13 @@
       "date": [28, 12, 2023],
       "tags": ["Bread", "Breakfast"],
       "id": 32
+    },
+    {
+      "title": "Fake Chipotle Chicken",
+      "slug": "chipotle-chicken",
+      "date": [28, 12, 2023],
+      "tags": ["Mexican", "Chicken", "Main"],
+      "id": 33
     }
   ]
 }
