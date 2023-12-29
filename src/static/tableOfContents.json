@@ -254,11 +254,21 @@
       "id": 30
     },
     {
-      "title": "Pork Larb",
+      "title": {
+        "english": "Pork Larb",
+        "foreign": "ລາບ"
+      },
       "slug": "pork-larb",
       "date": [27, 12, 2023],
       "tags": ["South-East Asian", "Main", "Pork"],
       "id": 31
+    },
+    {
+      "title": "Yeasted Waffles",
+      "slug": "yeasted-waffles",
+      "date": [28, 12, 2023],
+      "tags": ["Bread", "Breakfast"],
+      "id": 32
     }
   ]
 }
