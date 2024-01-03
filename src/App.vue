@@ -7,19 +7,18 @@
 
 <script setup>
 import navSection from "./components/section_components/nav_section.vue";
-import { ref } from "vue";
-
-const width_cutoff = 500;
-const isMobile = ref(window.innerWidth < width_cutoff);
 </script>
 
 <style lang="scss">
 @import "./assets/styles/globalStyles.scss";
 
+.hide_nav {
+  background-color: red;
+  // transform: translateY(-1000px);
+}
 #nav {
   @include container;
-
-  top: 0px;
+  position: relative;
   box-sizing: border-box;
 }
 
@@ -30,12 +29,14 @@ const isMobile = ref(window.innerWidth < width_cutoff);
   display: flex;
 }
 
+#content {
+  width: 100%;
+}
+
 @include mobile {
   #nav {
-    @include flex(row, flex-end, center);
-
-    position: static;
-    height: 150px;
+    position: sticky;
+    top: 0;
     width: 100vw;
   }
   #main {
@@ -45,8 +46,6 @@ const isMobile = ref(window.innerWidth < width_cutoff);
 
 @include desktop {
   #nav {
-    @include flex(column, flex-end, center);
-
     position: sticky;
     height: 100vh;
     width: 150px;
@@ -54,9 +53,5 @@ const isMobile = ref(window.innerWidth < width_cutoff);
   #main {
     @include flex(row, flex-start, flex-start);
   }
-}
-
-#content {
-  width: 100%;
 }
 </style>

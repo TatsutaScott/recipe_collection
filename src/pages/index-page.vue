@@ -26,15 +26,27 @@ import data from "@/static/tableOfContents.json";
 import recipeCard from "@/components/low_level_components/recipe_card.vue";
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import "../assets/styles/globalStyles.scss";
+
 #index-container {
-  padding-left: 2rem;
+  padding: 0 2rem;
+}
+
+h1 {
+  margin-top: 0;
 }
 
 #card-gallery {
-  display: flex;
   margin-top: 1rem;
+
+  @include flex(row, center, center);
   flex-wrap: wrap;
-  justify-content: center;
 }
+
+// @include mobile {
+// }
+
+// @include desktop {
+// }
 </style>

@@ -276,6 +276,13 @@
       "date": [28, 12, 2023],
       "tags": ["Mexican", "Chicken", "Main"],
       "id": 33
+    },
+    {
+      "title": "Flaky All-Butter Pie Dough",
+      "slug": "pie-crust",
+      "date": [31, 12, 2023],
+      "tags": ["Dessert", "Baking", "Ingredient"],
+      "id": 34
     }
   ]
 }
