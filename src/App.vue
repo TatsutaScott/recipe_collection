@@ -12,16 +12,6 @@ import navSection from "./components/section_components/nav_section.vue";
 <style lang="scss">
 @import "./assets/styles/globalStyles.scss";
 
-.hide_nav {
-  background-color: red;
-  // transform: translateY(-1000px);
-}
-#nav {
-  @include container;
-  position: relative;
-  box-sizing: border-box;
-}
-
 #main {
   margin: 0;
   padding: 0;
@@ -32,11 +22,15 @@ import navSection from "./components/section_components/nav_section.vue";
 #content {
   width: 100%;
 }
+#nav {
+  @include container;
+  box-sizing: border-box;
+}
 
 @include mobile {
   #nav {
-    position: sticky;
-    top: 0;
+    // position: sticky;
+    // top: 0;
     width: 100vw;
   }
   #main {

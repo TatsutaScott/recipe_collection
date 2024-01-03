@@ -1,5 +1,5 @@
 <template>
-  <div id="nav-div" :class="{ show_nav: showNavbar }">
+  <div id="nav-div" :class="{ hide_nav: showNavbar }">
     <div id="nav-options">
       <router-link to="/index" class="plain">index</router-link>
       <router-link to="/about" class="plain">about</router-link>
@@ -13,7 +13,7 @@
 <script setup>
 import { ref } from "vue";
 
-const showNavbar = ref(true); // eslint-disable-line no-unused-vars
+const showNavbar = ref(false); // eslint-disable-line no-unused-vars
 
 window.addEventListener("scroll", onScroll);
 let lastScrollPosition;
@@ -26,32 +26,10 @@ function onScroll() {
     return;
   }
   // Here we determine whether we need to show or hide the navbar
-  showNavbar.value = currentScrollPosition < lastScrollPosition;
+  showNavbar.value = currentScrollPosition > lastScrollPosition;
   // Set the current scroll position as the last scroll position
   lastScrollPosition = currentScrollPosition;
-
-  if (showNavbar.value) console.log("going up");
 }
-// import { ref } from "vue";
-// const showNavbar = ref(false); // eslint-disable-line no-unused-vars
-
-// window.addEventListener("scroll", onScroll);
-// let lastScrollPosition;
-
-// function onScroll() {
-//   // Get the current scroll position
-//   const currentScrollPosition = window.scrollY;
-//   // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
-//   if (currentScrollPosition < 0) {
-//     return;
-//   }
-//   // Here we determine whether we need to show or hide the navbar
-//   showNavbar.value = currentScrollPosition < lastScrollPosition;
-//   // Set the current scroll position as the last scroll position
-//   lastScrollPosition = currentScrollPosition;
-
-//   if (showNavbar.value) console.log("going up");
-// }
 </script>
 
 <style lang="scss">
@@ -61,10 +39,7 @@ function onScroll() {
   font-size: 2rem;
   text-align: center;
 }
-.show_nav {
-  position: sticky;
-  top: 0;
-}
+
 #nav-options {
   a {
     transition: 0.5s;
@@ -79,8 +54,6 @@ function onScroll() {
 @include mobile {
   #nav-options {
     font-size: 1rem;
-    position: sticky;
-    top: 0;
     @include flex(row, center, center);
     a {
       margin: 0.5rem 0.75rem;
@@ -88,8 +61,13 @@ function onScroll() {
   }
   #nav {
     @include flex(column-reverse, flex-end, center);
+    position: sticky;
+    top: 0;
+    transition: all 0.5s;
+    background-color: white;
   }
-  #site-title {
+  .hide_nav {
+    transform: translateY(-200px);
   }
 }
 
