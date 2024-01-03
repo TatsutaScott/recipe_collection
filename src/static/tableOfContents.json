@@ -283,6 +283,27 @@
       "date": [31, 12, 2023],
       "tags": ["Dessert", "Baking", "Ingredient"],
       "id": 34
+    },
+    {
+      "title": "All-Purpose Crumble Topping",
+      "slug": "crumble-topping",
+      "date": [2, 1, 2024],
+      "tags": ["Dessert", "Baking", "Ingredient"],
+      "id": 35
+    },
+    {
+      "title": "Classic Cream Cheese Frosting",
+      "slug": "cream-cheese-frosting",
+      "date": [2, 1, 2024],
+      "tags": ["Dessert", "Baking", "Ingredient"],
+      "id": 36
+    },
+    {
+      "title": "Silkiest Chocolate Buttercream",
+      "slug": "chocolate-buttercream",
+      "date": [2, 1, 2024],
+      "tags": ["Dessert", "Baking", "Ingredient"],
+      "id": 37
     }
   ]
 }
