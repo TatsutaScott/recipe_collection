@@ -2,8 +2,14 @@
   "title": "Flaky All-Butter Pie Dough",
   "source": "Dessert Person (Claire Saffitz)",
   "time": {
-    "amount": 3,
-    "unit": "Hours"
+    "active": {
+      "amount": 1,
+      "unit": "hour"
+    },
+    "passive": {
+      "amount": 3,
+      "unit": "hours"
+    }
   },
   "servings": {
     "amount": 1,

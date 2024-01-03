@@ -304,6 +304,20 @@
       "date": [2, 1, 2024],
       "tags": ["Dessert", "Baking", "Ingredient"],
       "id": 37
+    },
+    {
+      "title": "Classic English Muffins",
+      "slug": "english-muffin",
+      "date": [2, 1, 1912],
+      "tags": ["Breakfast", "Bread", "Baking"],
+      "id": 38
+    },
+    {
+      "title": "St. Louis Gooey Butter Cake",
+      "slug": "butter-cake",
+      "date": [1, 2, 2024],
+      "tags": ["Breakfast", "Cake", "Baking"],
+      "id": 39
     }
   ]
 }
