@@ -1,6 +1,9 @@
 {
   "title": "Silkiest Chocolate Buttercream",
-  "source": "Dessert Person (Claire Saffitz)",
+  "source": {
+    "title": "Dessert Person",
+    "author": "Claire Saffitz"
+  },
   "time": {
     "amount": 35,
     "unit": "minutes"

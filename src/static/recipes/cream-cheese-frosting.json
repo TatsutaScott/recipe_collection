@@ -1,6 +1,9 @@
 {
   "title": "Classic Cream Cheese Frosting",
-  "source": "Dessert Person (Claire Saffitz)",
+  "source": {
+    "title": "Dessert Person",
+    "author": "Claire Saffitz"
+  },
   "time": {
     "amount": 10,
     "unit": "minutes"

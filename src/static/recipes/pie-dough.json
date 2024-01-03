@@ -1,6 +1,9 @@
 {
   "title": "Flaky All-Butter Pie Dough",
-  "source": "Dessert Person (Claire Saffitz)",
+  "source": {
+    "title": "Dessert Person",
+    "author": "Claire Saffitz"
+  },
   "time": {
     "active": {
       "amount": 1,
