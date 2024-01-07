@@ -26,7 +26,7 @@
         "english": "Smashed Cucumber Salad",
         "foreign": "拍黃瓜"
       },
-      "slug": "smashed-cucumber",
+      "slug": "smashed-cucumber-salad",
       "date": [27, 3, 2023],
       "tags": ["Side", "Chinese", "Salad"],
       "id": 3
@@ -315,9 +315,19 @@
     {
       "title": "St. Louis Gooey Butter Cake",
       "slug": "butter-cake",
-      "date": [1, 2, 2024],
+      "date": [2, 1, 2024],
       "tags": ["Breakfast", "Cake", "Baking"],
       "id": 39
+    },
+    {
+      "title": {
+        "foreign": "김치찌개",
+        "english": "Kimchi-jjigae"
+      },
+      "slug": "kichi-jjigae",
+      "date": [7, 1, 2024],
+      "tags": ["Korean", "Soup", "Pork", " Main"],
+      "id": 40
     }
   ]
 }

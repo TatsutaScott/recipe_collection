@@ -56,37 +56,47 @@ import(`../../static/recipes/${props.name}.json`).then(
 <style lang="scss">
 @import "@/assets/styles/globalStyles.scss";
 
-#recipe {
-  height: 100vh;
-  display: grid;
-  overflow-y: hidden;
-}
-// #titleContainer{}
-#detailsContainer {
-  display: flex;
-  flex-direction: row;
+@include mobile {
+  #content {
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
 }
 
-#titleContainer {
-  @include container();
-  @include flex(row, space-between, center);
-  height: 12.5vh;
-}
-#notesContainer {
-  @include container();
-  height: 12.5vh;
-}
-.sevenEighths {
-  height: 87.5vh;
+@include desktop {
 }
 
-.sixEighths {
-  height: 75vh;
-}
-#ingredientsSection {
-  @include container();
-}
-#directionsSection {
-  @include container();
-}
+// #recipe {
+//   height: 100vh;
+//   display: grid;
+//   overflow-y: hidden;
+// }
+// // #titleContainer{}
+// #detailsContainer {
+//   display: flex;
+//   flex-direction: row;
+// }
+
+// #titleContainer {
+//   @include container();
+//   @include flex(row, space-between, center);
+//   height: 12.5vh;
+// }
+// #notesContainer {
+//   @include container();
+//   height: 12.5vh;
+// }
+// .sevenEighths {
+//   height: 87.5vh;
+// }
+
+// .sixEighths {
+//   height: 75vh;
+// }
+// #ingredientsSection {
+//   @include container();
+// }
+// #directionsSection {
+//   @include container();
+// }
 </style>

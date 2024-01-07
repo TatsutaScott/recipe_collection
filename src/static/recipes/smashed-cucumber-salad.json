@@ -16,7 +16,7 @@
   "tags": ["Side", "Chinese", "Salad"],
   "ingredients": [
     {
-      "title": "",
+      "title": null,
       "notes": null,
       "contents": [
         {
@@ -78,7 +78,7 @@
   ],
   "directions": [
     {
-      "title": "",
+      "title": null,
       "steps": [
         "Wash the cucumbers and pat them dry with a clean towel. Make the salad dressing by combining the **salt**, **sugar**, **sesame oil**, **light soy sauce**, and **rice vinegar**. Stir until the sugar and salt are completely dissolved. Set aside.",
         "On a cutting board, lay a large knife flat against the **cucumber**, and smash it lightly with your other hand. The cucumber should crack open and smash into four sections. Repeat along its full length. Once the whole cucumber is completely open (*usually into 4 long sectional pieces*), cut it at a 45-degree angle into bite-sized pieces.",

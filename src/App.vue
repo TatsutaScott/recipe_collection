@@ -1,7 +1,7 @@
 <template>
   <div id="main">
     <navSection id="nav" />
-    <RouterView id="content" :class="{ mobile: isMobile }"></RouterView>
+    <RouterView id="content"></RouterView>
   </div>
 </template>
 
@@ -29,9 +29,8 @@ import navSection from "./components/section_components/nav_section.vue";
 
 @include mobile {
   #nav {
-    // position: sticky;
-    // top: 0;
     width: 100vw;
+    padding: 1rem;
   }
   #main {
     @include flex(column, flex-start, flex-start);
